@@ -1,6 +1,20 @@
 <html>
-<script src="index.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript">
+function mode() {
+    $.ajax({
+        url: 'mode.php',
+        success: function(data) {
+            $('#display').html(data);
+        }
+    });
+};
+setInterval(mode, 10000);
+</script>
 <div>
 <input type="text" id="text" value="554"/>
+</div>
+<div id="display">
+<script src="index.js"></script>
 </div>
 </html>
