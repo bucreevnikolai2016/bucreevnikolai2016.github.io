@@ -1,1 +1,1 @@
-var all = 555
+var all = document.getElementById('text').value;
