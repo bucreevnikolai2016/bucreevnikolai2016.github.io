@@ -1,3 +1,1 @@
-<script>
-var all = document.getElementById('all').innerHTML
-</script>
+var all = 555
