@@ -1,11 +1,8 @@
-<html>  
+<html>
 <body>
 
-<form action="action.php" method="get">
-Name: <input type="text" name="name"><br>
-E-mail: <input type="text" name="email"><br>
-<input type="submit">
-</form>
+Привет <?php echo $_GET["name"]; ?><br>
+Твой email: <?php echo $_GET["email"]; ?>
 
 </body>
 </html>
