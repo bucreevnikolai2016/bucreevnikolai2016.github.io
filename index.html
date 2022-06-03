@@ -6,6 +6,35 @@
     <meta name="description" content="contact form example">
   <title>Contact Form Example</title>
 </head>
+<div id="json">json here</div>
+<script type="text/javascript">
+var id = '1-RhP13Sji4kCRqdVfXDQjj1YBw2-P9MwfLqHcYe-8Ic';
+var gid = '0';
+var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
+fetch(url)
+  .then(response => response.text())
+  .then(data => document.getElementById("json").innerHTML=myItems(data.slice(47, -2))  
+  );
+function myItems(jsonString){
+  var json = JSON.parse(jsonString);
+  var table = '<table><tr>'
+  json.table.cols.forEach(colonne => table += '<th>' + colonne.label + '</th>')
+  table += '</tr>'
+  json.table.rows.forEach(ligne => {
+    table += '<tr>'
+    ligne.c.forEach(cellule => {
+        try{var valeur = cellule.f ? cellule.f : cellule.v}
+        catch(e){var valeur = ''}
+        table += '<td>' + valeur + '</td>'
+      }
+    )
+    table += '</tr>'
+    }
+  )
+  table += '</table>'
+  return table
+}
+</script>
 <iframe sandbox="allow-same-origin" id="Frame" width="560" height="315" src="https://www.youtube.com/embed/Bluxbh9CaQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <body>
   <h2 class="content-head is-center">Contact Us!</h2>
