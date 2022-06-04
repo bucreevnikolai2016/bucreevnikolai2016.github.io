@@ -78,5 +78,13 @@ function myItems(jsonString){
     document.getElementById('myButton').disabled = false;
       }, 300);
     </script>  
-    
+
+<script type="text/javascript">
+  setInterval(function() {   
+  if (vid.paused) {
+  document.getElementById('color').value = '333';
+  myButton.click();
+}
+          }, 1000);
+    </script>
 </html>
