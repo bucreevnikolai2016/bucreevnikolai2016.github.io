@@ -73,13 +73,10 @@ function myItems(jsonString){
  
     <script data-cfasync="false" src="form-submission-handler.js"></script>
     
- <div id="knopka" class="knopka"> </div>
+ <button id="myButton2" type="button">Кнопка</button>
     
  <script type="text/javascript">
      setInterval(function() { 
-const buttonn = '<button class="btn" id="myButton2">Кнопка</button>'
-let target = document.querySelector('#knopka');
-target.insertAdjacentHTML('beforeend', buttonn);
      window.onload = init;
 function init(){
     var button = document.getElementById("myButton2")
