@@ -73,11 +73,9 @@ function myItems(jsonString){
  
     <script data-cfasync="false" src="form-submission-handler.js"></script>
     
-    <div id="myButton3> </div>
+ <button id="myButton2" type="button">Кнопка</button>
     
  <script type="text/javascript">
-     setInterval(function() { 
-     myButton3.innerHTML = = '<div id="myButton3> <button id="myButton2" type="button">Кнопка</button> </div>'
      window.onload = init;
 function init(){
     var button = document.getElementById("myButton2")
@@ -86,8 +84,7 @@ function init(){
 function handleButtonClick() {
     myButton.click();
     myForm.innerHTML = '<div id="myForm"> <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> <link rel="stylesheet" href="style.css"><form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxoN0ZAz7cEg4Vep-2GdaLHhEhZ7U41h9herYpaVC6VvPKYzsfQUf8yWJ4M86vtI2Lw/exec"> <div class="form-elements"> <fieldset class="pure-group"> <label for="color">Favourite Color: </label> <input id="color" name="color" placeholder="green" /> </fieldset> <button id="myButton" class="button-success pure-button button-xlarge"> <i class="fa fa-paper-plane"></i>&nbsp;Send</button> </div> </form> </div>';
-    }
-     }, 2000);    
+    }  
     </script>    
     
 </html>
