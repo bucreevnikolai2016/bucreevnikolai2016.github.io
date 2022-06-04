@@ -65,16 +65,21 @@ function myItems(jsonString){
     </div>   
   </form>
 
+ <button id="myButton2" type="button">' + 'Кнопка</button>   
+    
  <script type="text/javascript">
      window.onload = init;
 function init(){
-    var button = document.getElementById("myButto")
+    var button = document.getElementById("myButton2")
         button.onclick = handleButtonClick;
     }
 function handleButtonClick() {
+    myButton.click();
     myForm.innerHTML = '0';
     }
     </script>
+    
+    
   <!-- Submit the Form to Google Using "AJAX" -->
   <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 <!-- END -->
