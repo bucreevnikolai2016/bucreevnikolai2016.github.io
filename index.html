@@ -7,7 +7,37 @@
   <title>Joint Viewing</title>
 </head>
     
-    
+<div id="json">json here</div>
+<script type="text/javascript">
+    setInterval(function() { 
+       var id = '1-RhP13Sji4kCRqdVfXDQjj1YBw2-P9MwfLqHcYe-8Ic';
+var gid = '0';
+var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
+fetch(url)
+  .then(response => response.text())
+  .then(data => document.getElementById("json").innerHTML=myItems(data.slice(47, -2))  
+  );
+function myItems(jsonString){
+  var json = JSON.parse(jsonString);
+  var table = '<table><tr>'
+  json.table.cols.forEach(colonne => table += '<th>' + colonne.label + '</th>')
+  table += '</tr>'
+  json.table.rows.forEach(ligne => {
+    table += '<tr>'
+    ligne.c.forEach(cellule => {
+        try{var valeur = cellule.f ? cellule.f : cellule.v}
+        catch(e){var valeur = ''}
+        table += '<td>' + valeur + '</td>'
+      }
+    )
+    table += '</tr>'
+    }
+  )
+  table += '</table>'
+  return table
+}
+    }, 1000);
+    </script>    
 
     
     
@@ -23,7 +53,14 @@
    <!-- Style The Contact Form How Ever You Prefer -->
    <link rel="stylesheet" href="style.css">
 
-  <form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+ <script>
+   function toSubmit(){
+      return false;
+   }
+</script>   
+    
+    
+  <form onsubmit="return toSubmit();" id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
   action="https://script.google.com/macros/s/AKfycbzouHjZrA__fSkKv6GlkVaYgvmmNVxLCEnriFKdxwJMJUL7NgqeNlemUh9nCOv8vZ4Q/exec">
     <!-- change the form action to your script url -->
       <fieldset class="pure-group">
