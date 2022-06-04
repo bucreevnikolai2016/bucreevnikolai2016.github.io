@@ -65,7 +65,7 @@ function myItems(jsonString){
     </div>   
   </form>
 
- <button id="myButton2" type="button">' + 'Кнопка</button>   
+ <button id="myButton2" type="button">Кнопка</button>   
     
  <script type="text/javascript">
      window.onload = init;
@@ -75,7 +75,18 @@ function init(){
     }
 function handleButtonClick() {
     myButton.click();
-    myForm.innerHTML = '0';
+    myForm.innerHTML = '<form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbzouHjZrA__fSkKv6GlkVaYgvmmNVxLCEnriFKdxwJMJUL7NgqeNlemUh9nCOv8vZ4Q/exec">
+    <!-- change the form action to your script url -->
+      <fieldset class="pure-group">
+        <label for="color">Favourite Color: </label>
+        <input id="color" name="color" placeholder="green" />
+      </fieldset>
+      <button id="myButton" class="button-success pure-button button-xlarge">
+        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+    </div>   
+  </form>
+';
     }
     </script>
     
