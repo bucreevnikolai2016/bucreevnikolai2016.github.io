@@ -44,7 +44,6 @@ function myItems(jsonString){
 <video id="vid" controls="controls">
   <source src="http://bytopia.stream.voidboost.cc/6/9/4/6/9/c35b6a3a84eaf887126d7871d26af137:2022060417:c578f1f8-a99e-4242-9f91-a37484b6036e/jd579.mp4" />
 </video>
-<iframe sandbox="allow-same-origin" id="Frame" width="560" height="315" src="https://www.youtube.com/embed/Bluxbh9CaQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <body>
 
@@ -54,22 +53,38 @@ function myItems(jsonString){
    <!-- Style The Contact Form How Ever You Prefer -->
    <link rel="stylesheet" href="style.css">
 
-  <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  <form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
   action="https://script.google.com/macros/s/AKfycbzouHjZrA__fSkKv6GlkVaYgvmmNVxLCEnriFKdxwJMJUL7NgqeNlemUh9nCOv8vZ4Q/exec">
     <!-- change the form action to your script url -->
-
       <fieldset class="pure-group">
         <label for="color">Favourite Color: </label>
         <input id="color" name="color" placeholder="green" />
       </fieldset>
-
-      <button class="button-success pure-button button-xlarge">
+      <button id="myButton" class="button-success pure-button button-xlarge">
         <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-    </div>
-
-      
+    </div>   
   </form>
 
+ <script type="text/javascript">
+     window.onload = init;
+function init(){
+    var button = document.getElementById("myButton")
+        button.onclick = handleButtonClick;
+    }
+function handleButtonClick() {
+    myForm.innerHTML = '<form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  action="https://script.google.com/macros/s/AKfycbzouHjZrA__fSkKv6GlkVaYgvmmNVxLCEnriFKdxwJMJUL7NgqeNlemUh9nCOv8vZ4Q/exec">
+    <!-- change the form action to your script url -->
+      <fieldset class="pure-group">
+        <label for="color">Favourite Color: </label>
+        <input id="color" name="color" placeholder="green" />
+      </fieldset>
+      <button id="myButton" class="button-success pure-button button-xlarge">
+        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+    </div>   
+  </form>';
+    }
+    </script>
   <!-- Submit the Form to Google Using "AJAX" -->
   <script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
 <!-- END -->
