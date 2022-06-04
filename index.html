@@ -66,13 +66,14 @@ function myItems(jsonString){
   </form>
 
  <script type="text/javascript">
+     var myFormm = document.querySelector('.gform pure-form pure-form-stacked')
      window.onload = init;
 function init(){
     var button = document.getElementById("myButton")
         button.onclick = handleButtonClick;
     }
 function handleButtonClick() {
-    myForm.innerHTML = '<form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+    myFormm.innerHTML = '<form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
   action="https://script.google.com/macros/s/AKfycbzouHjZrA__fSkKv6GlkVaYgvmmNVxLCEnriFKdxwJMJUL7NgqeNlemUh9nCOv8vZ4Q/exec">
     <!-- change the form action to your script url -->
       <fieldset class="pure-group">
