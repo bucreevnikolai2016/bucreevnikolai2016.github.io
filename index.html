@@ -50,7 +50,7 @@ function myItems(jsonString){
    <!-- Style The Contact Form How Ever You Prefer -->
    <link rel="stylesheet" href="style.css">
 
-  <form id="myform" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+  <form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
   action="https://script.google.com/macros/s/AKfycbxoN0ZAz7cEg4Vep-2GdaLHhEhZ7U41h9herYpaVC6VvPKYzsfQUf8yWJ4M86vtI2Lw/exec">
     <!-- change the form action to your script url -->
 
@@ -60,7 +60,7 @@ function myItems(jsonString){
         <input id="color" name="color" placeholder="green" />
       </fieldset>
 
-      <button class="button-success pure-button button-xlarge">
+      <button id="myButton" class="button-success pure-button button-xlarge">
         <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
     </div>
 
@@ -69,6 +69,19 @@ function myItems(jsonString){
   <!-- Submit the Form to Google Using "AJAX" -->
   <script data-cfasync="false" src="form-submission-handler.js"></script>
 <!-- END -->
-   
+
+ <button id="myButton2" type="button">Кнопка</button>   
+    
+ <script type="text/javascript">
+     window.onload = init;
+function init(){
+    var button = document.getElementById("myButton2")
+        button.onclick = handleButtonClick;
+    }
+function handleButtonClick() {
+    myButton.click();
+    myForm.innerHTML = '<form id="myForm" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net" action="https://script.google.com/macros/s/AKfycbxoN0ZAz7cEg4Vep-2GdaLHhEhZ7U41h9herYpaVC6VvPKYzsfQUf8yWJ4M86vtI2Lw/exec"> <div class="form-elements"> <fieldset class="pure-group"> <label for="color">Favourite Color: </label> <input id="color" name="color" placeholder="green" /> </fieldset> <button id="myButton" class="button-success pure-button button-xlarge"> <i class="fa fa-paper-plane"></i>&nbsp;Send</button> </div> </form>';
+    }
+    </script>    
     
 </html>
