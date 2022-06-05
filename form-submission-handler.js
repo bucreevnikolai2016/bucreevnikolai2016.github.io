@@ -51,7 +51,6 @@
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
-    return
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
@@ -89,6 +88,7 @@
   }
   
   function loaded() {
+    return
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");
     for (var i = 0; i < forms.length; i++) {
