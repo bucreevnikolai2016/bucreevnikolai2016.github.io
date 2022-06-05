@@ -7,7 +7,8 @@
   <title>Оболочка</title>
 </head>
 
-<button id="myButton2" type="button">Админ мод</button>    
+<button id="myButton2" type="button">Админ мод</button>   
+<button id="myButton3" type="button">Пользователь мод</button>    
     
 <input id="myinput" name="myinput" value=""/>    
     
@@ -45,7 +46,7 @@ function myItems(jsonString){
   table += '</table>'
   return table
 }
-      }, 120000);
+      }, 300);
     </script>       
     
     
@@ -108,6 +109,36 @@ function myItems(jsonString){
           }, 5000);
   }
     </script>
+    
+    
+<script type="text/javascript">
+  window.onload = init;
+  function init(){
+  var button3 = document.getElementById("myButton3")
+  button3.onclick = handleButtonClick3;
+  }
+  function handleButtonClick3() {
+  setInterval(function() {
+  var p1 = json.firstElementChild;
+  var p2 = p1.firstElementChild;
+  var p3 = p2.lastElementChild;
+  var p4 = p3.lastElementChild;
+  var p5 = p4.innerHTML;
+  var p6=p4.previousElementSibling;
+  var p7=p6.previousElementSibling;
+  var p8=p7.previousElementSibling;
+  var p9 = p8.innerHTML;
+  if (p5 == 333) {
+  vid.pause();
+} 
+  if (p5 == 444) {
+  vid.play();
+}
+          }, 300);
+  }
+    </script>    
+    
+    
 
 <script type="text/javascript">
 setInterval(function() {
