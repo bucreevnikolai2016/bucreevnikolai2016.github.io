@@ -8,7 +8,8 @@
 </head>
 
 <button id="myButton2" type="button">Админ мод</button>   
-<button id="myButton3" type="button">Пользователь мод</button>    
+<button id="myButton3" type="button">Пользователь мод (ПП)</button> 
+<button id="myButton4" type="button">Пользователь мод (ПЕР)</button>  
     
 <input id="myinput" name="myinput" value=""/>    
     
@@ -92,8 +93,10 @@ function myItems(jsonString){
   function init(){
   var button2 = document.getElementById("myButton2")
   var button3 = document.getElementById("myButton3")
+  var button4 = document.getElementById("myButton4")
   button2.onclick = handleButtonClick2;
   button3.onclick = handleButtonClick3;
+  button4.onclick = handleButtonClick4;
   }
     </script>
   
@@ -135,13 +138,16 @@ function myItems(jsonString){
   vid.play();
 }
           }, 300);
-  setInterval(function() {
-  vid.currentTime = p9;
-          }, 15000); 
   }
     </script>    
     
-    
+<script type="text/javascript">
+  function handleButtonClick4() {
+  setInterval(function() {
+  vid.currentTime = p9;
+          }, 15000);
+  }
+    </script>       
 
 <script type="text/javascript">
 setInterval(function() {
