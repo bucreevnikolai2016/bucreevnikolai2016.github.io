@@ -74,7 +74,7 @@ function myItems(jsonString){
 <script type="text/javascript">
     setInterval(function() {     
     if (document.getElementById('myButton').disabled) {
-        window.stop();
+        setTimeout(() => { window.stop(); }, 1000);
     }
       }, 300);
     </script>      
