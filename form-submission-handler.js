@@ -88,7 +88,6 @@
   }
   
   function loaded() {
-    return
     // bind to the submit event of our form
     var forms = document.querySelectorAll("form.gform");
     for (var i = 0; i < forms.length; i++) {
