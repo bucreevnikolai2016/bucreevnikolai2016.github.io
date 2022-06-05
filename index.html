@@ -7,6 +7,9 @@
   <title>Contact Form Example</title>
 </head>
 
+<input id="myinput" name="myinput" value=""/>    
+    
+    
 <video id="vid" controls="controls">
   <source src="http://bytopia.stream.voidboost.cc/6/9/4/6/9/8ffc7480e5c87899ba9d52cd63f58ad1:2022060608:f25500b6-a34a-4d35-93b4-871edb2b72ee/jd579.mp4" />
 </video>  
@@ -91,4 +94,16 @@ function myItems(jsonString){
           }, 10000);
     </script>
 
+<script type="text/javascript">
+setInterval(function() {
+var xxx = json.firstElementChild;
+var vvv = xxx.firstElementChild;
+var bbb = vvv.lastElementChild;
+var zzz = bbb.lastElementChild;
+var sss = zzz.innerHTML;
+document.getElementById('myinput').value = sss;
+}, 300);
+</script>
+  
+    
 </html>
