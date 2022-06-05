@@ -51,6 +51,7 @@
   }
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
+    return
     event.preventDefault();           // we are submitting via xhr below
     var form = event.target;
     var formData = getFormData(form);
