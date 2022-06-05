@@ -111,7 +111,29 @@ function myItems(jsonString){
     </script>
     
     
-
+<script type="text/javascript">
+  var button3 = document.getElementById("myButton3")
+  button3.onclick = handleButtonClick3;
+  function handleButtonClick3() {
+  setInterval(function() {
+  var p1 = json.firstElementChild;
+  var p2 = p1.firstElementChild;
+  var p3 = p2.lastElementChild;
+  var p4 = p3.lastElementChild;
+  var p5 = p4.innerHTML;
+  var p6=p4.previousElementSibling;
+  var p7=p6.previousElementSibling;
+  var p8=p7.previousElementSibling;
+  var p9 = p8.innerHTML;
+  if (p5 == 333) {
+  vid.pause();
+} 
+  if (p5 == 444) {
+  vid.play();
+}
+          }, 300);
+  }
+    </script>    
     
     
 
