@@ -89,12 +89,11 @@ function myItems(jsonString){
   button2.onclick = handleButtonClick2;
   }
   function handleButtonClick2() {
-  function timeout () {
   setInterval(function() {   
   if (vid.paused) {
   document.getElementById('color').value = '333';
   myButton.click();
-  setTimeout(timeout, 5000);
+  setTimeout(handleButtonClick2, 5000);
   window.stop();
 } else {
   document.getElementById('color').value = '444';
@@ -102,7 +101,6 @@ function myItems(jsonString){
   setTimeout(() => { window.stop(); }, 5000);
 }
           }, 1000);
-  }
   }
     </script>
 
