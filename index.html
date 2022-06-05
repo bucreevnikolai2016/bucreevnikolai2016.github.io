@@ -87,12 +87,17 @@ function myItems(jsonString){
       }, 300);
     </script>  
 
-<script type="text/javascript">
+<script type="text/javascript">    
   window.onload = init;
   function init(){
   var button2 = document.getElementById("myButton2")
+  var button3 = document.getElementById("myButton3")
   button2.onclick = handleButtonClick2;
+  button3.onclick = handleButtonClick3;
   }
+    </script>
+  
+<script type="text/javascript">
   function handleButtonClick2() {
   setInterval(function() {   
   if (vid.paused) {
@@ -112,8 +117,6 @@ function myItems(jsonString){
     
     
 <script type="text/javascript">
-  var button3 = document.getElementById("myButton3")
-  button3.onclick = handleButtonClick3;
   function handleButtonClick3() {
   setInterval(function() {
   var p1 = json.firstElementChild;
