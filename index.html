@@ -7,6 +7,8 @@
   <title>Contact Form Example</title>
 </head>
 
+<button id="myButton2" type="button">Админ мод</button>    
+    
 <input id="myinput" name="myinput" value=""/>    
     
     
@@ -81,7 +83,11 @@ function myItems(jsonString){
     </script>  
 
 <script type="text/javascript">
-  setInterval(function() {   
+  window.onload = init;
+  function init(){
+  var button2 = document.getElementById("myButton2")
+  button2.onclick = handleButtonClick2;
+  setInterval(function handleButtonClick2() {   
   if (vid.paused) {
   document.getElementById('color').value = '333';
   myButton.click();
