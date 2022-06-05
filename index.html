@@ -93,14 +93,13 @@ function myItems(jsonString){
   if (vid.paused) {
   document.getElementById('color').value = '333';
   myButton.click();
-  setTimeout(handleButtonClick2, 5000);
-  window.stop();
+  setTimeout(() => { window.stop(); }, 4000);
 } else {
   document.getElementById('color').value = '444';
   myButton.click();
-  setTimeout(() => { window.stop(); }, 5000);
+  setTimeout(() => { window.stop(); }, 4000);
 }
-          }, 1000);
+          }, 5000);
   }
     </script>
 
