@@ -130,9 +130,11 @@ function myItems(jsonString){
   var p9 = p8.innerHTML;
   if (p5 == 333) {
   vid.pause();
+  vid.currentTime = p9;
 } 
   if (p5 == 444) {
   vid.play();
+  vid.currentTime = p9;
 }
           }, 300);
   }
