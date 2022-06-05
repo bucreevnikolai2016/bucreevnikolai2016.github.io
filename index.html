@@ -68,16 +68,7 @@ function myItems(jsonString){
 
     </form>
         
-<script data-cfasync="false" src="form-submission-handler.js"></script>        
-
-
-<script type="text/javascript">
-    setInterval(function() {     
-    if (document.getElementById('myButton').disabled) {
-        setTimeout(() => { window.stop(); }, 2000);
-    }
-      }, 300);
-    </script>      
+<script data-cfasync="false" src="form-submission-handler.js"></script>          
     
 <script type="text/javascript">
     setInterval(function() {     
@@ -91,9 +82,11 @@ function myItems(jsonString){
   if (vid.paused) {
   document.getElementById('color').value = '333';
   myButton.click();
+  setTimeout(() => { window.stop(); }, 2000);
 } else {
-    document.getElementById('color').value = '444';
+  document.getElementById('color').value = '444';
   myButton.click();
+  setTimeout(() => { window.stop(); }, 2000);
 }
           }, 120000);
     </script>
