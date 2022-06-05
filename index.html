@@ -130,13 +130,14 @@ function myItems(jsonString){
   var p9 = p8.innerHTML;
   if (p5 == 333) {
   vid.pause();
-  vid.currentTime = p9;
 } 
   if (p5 == 444) {
   vid.play();
-  vid.currentTime = p9;
 }
-          }, 5000);
+          }, 300);
+  setInterval(function() {
+  vid.currentTime = p9;
+          }, 15000); 
   }
     </script>    
     
