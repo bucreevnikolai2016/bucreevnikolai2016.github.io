@@ -144,8 +144,17 @@ function myItems(jsonString){
 <script type="text/javascript">
   function handleButtonClick4() {
   setInterval(function() {
-  vid.currentTime = p9;
-          }, 15000);
+  var d1 = json.firstElementChild;
+  var d2 = d1.firstElementChild;
+  var d3 = d2.lastElementChild;
+  var d4 = d3.lastElementChild;
+  var d5 = d4.innerHTML;
+  var d6=d4.previousElementSibling;
+  var d7=d6.previousElementSibling;
+  var d8=d7.previousElementSibling;
+  var d9 = d8.innerHTML;
+  vid.currentTime = d9;
+          }, 10000);
   }
     </script>       
 
