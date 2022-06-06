@@ -167,20 +167,15 @@ document.getElementById('otpravka').value = '1';
     </script>    
     
 <script type="text/javascript">
-  function handleButtonClick4() {
   setInterval(function() {
-  var d1 = json.firstElementChild;
-  var d2 = d1.firstElementChild;
-  var d3 = d2.lastElementChild;
-  var d4 = d3.lastElementChild;
-  var d5 = d4.innerHTML;
-  var d6=d4.previousElementSibling;
-  var d7=d6.previousElementSibling;
-  var d8=d7.previousElementSibling;
-  var d9 = d8.innerHTML;
-  vid.currentTime = d9;
-          }, 20000);
-  }
+  var r1 = vid.currentTime;
+  setTimeout(() => { var r2 = vid.currentTime; }, 2000);
+  var r3 = r1 - r2;
+  var r4 = Math.abs(r3);
+  if (r4 > 5) {
+  vid.pause();
+  }  
+          }, 5000);
     </script>       
 
 <script type="text/javascript">
