@@ -169,13 +169,11 @@ document.getElementById('otpravka').value = '1';
 <script type="text/javascript">
   setInterval(function() {
   var r1 = vid.currentTime;
-  setTimeout(() => { var r2 = vid.currentTime; }, 4900);
-  var r3 = r1 - r2;
-  var r4 = Math.abs(r3);
-  if (r4 > 5) {
-  vid.pause();
-  }  
-          }, 5000);
+  setTimeout(() => { var r2 = vid.currentTime; }, 2000);
+  setTimeout(() => { var r3 = r1 - r2; }, 2300);
+  setTimeout(() => { var r4 = Math.abs(r3); }, 2600);
+  setTimeout(() => { if (r4 > 5) { vid.pause(); }  }, 2900);
+          }, 3000);
     </script>       
 
 <script type="text/javascript">
