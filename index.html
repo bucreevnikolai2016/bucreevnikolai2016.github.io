@@ -178,7 +178,11 @@ document.getElementById('otpravka').value = '1';
   var r3 = r1 - r2;
   var r4 = Math.abs(r3);
   if (r4 > 5) { 
-  vid.pause(); 
+  if (vid.paused) {
+  vid.play();
+  } else {
+  vid.pause();
+  }
   }  
   }
   delayedGreeting(); 
