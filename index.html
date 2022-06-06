@@ -179,9 +179,10 @@ document.getElementById('otpravka').value = '1';
   var r4 = Math.abs(r3);
   if (r4 > 5 && vid.paused) { 
   vid.play();
-  }
+  } else {
   if (r4 > 5 && !vid.paused) { 
   vid.pause();
+  }
   }
   }
   delayedGreeting(); 
