@@ -182,6 +182,17 @@ document.getElementById('otpravka').value = '1';
   } 
   }
   delayedGreeting(); 
+  async function delayedGreeting2() {
+  var r1 = vid.currentTime;
+  await sleep(2000);
+  var r2 = vid.currentTime;
+  var r3 = r1 - r2;
+  var r4 = Math.abs(r3);
+  if (r4 > 5 && !vid.paused) { 
+  vid.pause();
+  } 
+  }
+  delayedGreeting2(); 
           }, 500);
     </script>       
 
