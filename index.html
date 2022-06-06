@@ -182,7 +182,15 @@ document.getElementById('otpravka').value = '1';
   } 
   }
   delayedGreeting(); 
-  async function delayedGreeting2() {
+          }, 500);
+    </script>    
+    
+<script type="text/javascript">
+  setInterval(function() {
+  function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  async function delayedGreeting() {
   var r1 = vid.currentTime;
   await sleep(2000);
   var r2 = vid.currentTime;
@@ -192,9 +200,9 @@ document.getElementById('otpravka').value = '1';
   vid.pause();
   } 
   }
-  delayedGreeting2(); 
+  delayedGreeting(); 
           }, 500);
-    </script>       
+    </script>   
 
 <script type="text/javascript">
 setInterval(function() {
