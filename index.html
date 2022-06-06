@@ -101,22 +101,35 @@ function myItems(jsonString){
     </script>
   
 <script type="text/javascript">
-  function handleButtonClick2() {
-  setInterval(function() {   
-  if (vid.paused) {
-  document.getElementById('color').value = '333';
-  document.getElementById('name').value = vid.currentTime;
-  myButton.click();
-  setTimeout(() => { window.stop(); }, 4500);
+function handleButtonClick2() {
+setInterval(function() {   
+var t1 = json.firstElementChild;
+var t2 = t1.firstElementChild;
+var t3 = t2.lastElementChild;
+var t4 = t3.lastElementChild;
+var t5 = t4.innerHTML;
+if (vid.paused) {
+var t6 = '333';
 } else {
-  document.getElementById('color').value = '444';
-  document.getElementById('name').value = vid.currentTime;
-  myButton.click();
-  setTimeout(() => { window.stop(); }, 4500);
+var t6 = '444';
 }
-          }, 5000);
-  }
-    </script>
+if (t5 == t6) {
+if (otpravka == 1) {
+window.stop();
+var otpravka = '0';
+} else {
+}
+} else {
+if (otpravka == 1) {
+} else {
+document.getElementById('color').value = t6;
+myButton.click();
+var otpravka = '1';
+}
+}
+}, 300);
+}
+</script>
     
     
 <script type="text/javascript">
