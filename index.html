@@ -12,7 +12,7 @@
 <button id="myButton4" type="button">Пользователь мод (ПЕР)</button>  
     
 <input id="myinput" name="myinput" value=""/>    
-    
+<input id="otpravka" name="otpravka" value=""/>   
     
 <video id="vid" controls="controls">
   <source src="http://bytopia.stream.voidboost.cc/6/9/4/6/9/8ffc7480e5c87899ba9d52cd63f58ad1:2022060608:f25500b6-a34a-4d35-93b4-871edb2b72ee/jd579.mp4" />
@@ -115,20 +115,20 @@ var t6 = '333';
 var t6 = '444';
 }
 if (t5 == t6) {
-if (otpravka == 1) {
+if (document.getElementById('otpravka').value == 1) {
 window.stop();
-var otpravka = '0';
+document.getElementById('otpravka').value = '0';
 } else {
 }
 } else {
-if (otpravka == 1) {
+if (document.getElementById('otpravka').value == 1) {
 } else {
 document.getElementById('color').value = t6;
 myButton.click();
-var otpravka = '1';
+document.getElementById('otpravka').value = '1';
 }
 }
-}, 10000);
+}, 300);
 }
 </script>
     
