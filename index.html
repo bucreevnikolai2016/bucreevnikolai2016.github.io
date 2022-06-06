@@ -177,10 +177,10 @@ document.getElementById('otpravka').value = '1';
   var r2 = vid.currentTime;
   var r3 = r1 - r2;
   var r4 = Math.abs(r3);
-  if (r4 > 50 & vid.paused) { 
+  if (r4 > 5 && vid.paused) { 
   vid.play();
   }
-  if (r4 > 50 & !vid.paused) { 
+  if (r4 > 5 && !vid.paused) { 
   vid.pause();
   }
   }
