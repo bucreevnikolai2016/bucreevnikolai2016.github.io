@@ -168,12 +168,22 @@ document.getElementById('otpravka').value = '1';
     
 <script type="text/javascript">
   setInterval(function() {
+  function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+  currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+  }
   var r1 = vid.currentTime;
-  setTimeout(() => { var r2 = vid.currentTime; }, 2000);
-  setTimeout(() => { var r3 = r1 - r2; }, 2300);
-  setTimeout(() => { var r4 = Math.abs(r3); }, 2600);
-  setTimeout(() => { if (r4 > 5) { vid.pause(); }  }, 2900);
-          }, 3000);
+  sleep(2000);
+  var r2 = vid.currentTime;
+  var r3 = r1 - r2;
+  var r4 = Math.abs(r3);
+  if (r4 > 5) { 
+  vid.pause(); 
+  }  
+          }, 500);
     </script>       
 
 <script type="text/javascript">
