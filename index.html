@@ -168,21 +168,20 @@ document.getElementById('otpravka').value = '1';
     
 <script type="text/javascript">
   setInterval(function() {
-  function sleep(milliseconds) {
-  const date = Date.now();
-  let currentDate = null;
-  do {
-  currentDate = Date.now();
-  } while (currentDate - date < milliseconds);
+  function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
   }
+  async function delayedGreeting() {
   var r1 = vid.currentTime;
-  sleep(2000);
+  await sleep(2000);
   var r2 = vid.currentTime;
   var r3 = r1 - r2;
   var r4 = Math.abs(r3);
   if (r4 > 5) { 
   vid.pause(); 
   }  
+  }
+  delayedGreeting(); 
           }, 500);
     </script>       
 
