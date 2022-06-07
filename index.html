@@ -166,7 +166,27 @@ document.getElementById('otpravka').value = '1';
   }
     </script>    
     
- 
+for (let i=0; i<10; i++) {
+   task(i);
+}
+function task(i) {
+  setTimeout(function() {
+     function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function delayedGreeting() {
+  var r1 = vid.currentTime;
+  await sleep(2000);
+  var r2 = vid.currentTime;
+  var r3 = r1 - r2;
+  var r4 = Math.abs(r3);
+  if (r4 > 5 && vid.paused) { 
+  vid.play();
+  }
+}
+delayedGreeting();
+  }, 2500 * i);
+} 
 
 <script type="text/javascript">
 setInterval(function() {
