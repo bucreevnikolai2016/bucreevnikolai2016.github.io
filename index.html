@@ -178,9 +178,12 @@ document.getElementById('otpravka').value = '1';
   var r4 = Math.abs(r3);
   if (r4 > 5 && !vid.paused) { 
   vid.pause();
+  var pp = '1';
   } 
   if (r4 > 5 && vid.paused) { 
+  if (pp == 1) {} else {
   vid.play();
+  }
   } 
   }
   delayedGreeting(); 
