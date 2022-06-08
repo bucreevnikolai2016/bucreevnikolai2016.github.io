@@ -51,6 +51,38 @@ function myItems(jsonString){
     </script>       
     
     
+<div id="json2">json here</div>
+<script type="text/javascript">
+    setInterval(function() { 
+       var id = '1kTgtW3PMPsxg4F9AitQtv_1f8uSgQH7lHIQpWDACe7k';
+var gid = '0';
+var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
+fetch(url)
+  .then(response => response.text())
+  .then(data => document.getElementById("json2").innerHTML=myItems(data.slice(47, -2))  
+  );
+function myItems(jsonString){
+  var json = JSON.parse(jsonString);
+  var table = '<table><tr>'
+  json.table.cols.forEach(colonne => table += '<th>' + colonne.label + '</th>')
+  table += '</tr>'
+  json.table.rows.forEach(ligne => {
+    table += '<tr>'
+    ligne.c.forEach(cellule => {
+        try{var valeur = cellule.f ? cellule.f : cellule.v}
+        catch(e){var valeur = ''}
+        table += '<td>' + valeur + '</td>'
+      }
+    )
+    table += '</tr>'
+    }
+  )
+  table += '</table>'
+  return table
+}
+      }, 1000);
+    </script>       
+    
   
     
  
@@ -79,11 +111,11 @@ function myItems(jsonString){
 
     </form>
         
-<form style="display:none" class="gform2 pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+<form style="display:none" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
   action="https://script.google.com/macros/s/AKfycbxe8NRPTBi8PmpqnI1mPox2j_GInzIdl-6xVJ2ZKTWVIp9-Qxx19IA0iB8zu2WEix45/exec">
     <!-- change the form action to your script url -->
 
-    <div class="form-elements2">
+    <div id="mydiv2" class="form-elements">
       <fieldset class="pure-group">
       <label for="name">Name: </label>
       <input id="name2" name="name" placeholder="What your Mom calls you" />
@@ -93,20 +125,21 @@ function myItems(jsonString){
       <input id="color2" name="color" placeholder="green" />
       </fieldset>
 
-      <button class="button-success pure-button button-xlarge">
+      <button id="myButton5" class="button-success pure-button button-xlarge">
         <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
     </div>
 
     </form>    
     
     
-<script data-cfasync="false" src="form-submission-handler.js"></script>   
-<script data-cfasync="false" src="form-submission-handler2.js"></script>     
+<script data-cfasync="false" src="form-submission-handler.js"></script>    
     
 <script type="text/javascript">
     setInterval(function() {     
     document.getElementById("mydiv").style="";
     document.getElementById('myButton').disabled = false;
+    document.getElementById("mydiv2").style="";
+    document.getElementById('myButton2').disabled = false;        
       }, 500);
     </script>  
 
