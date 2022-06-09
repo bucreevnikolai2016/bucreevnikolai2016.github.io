@@ -178,6 +178,7 @@ var t2 = t1.firstElementChild;
 var t3 = t2.lastElementChild;
 var t4 = t3.lastElementChild;
 var t5 = t4.innerHTML;
+var t7 = vid.currentTime;
 if (vid.paused) {
 var t6 = '333';
 } else {
@@ -192,11 +193,12 @@ document.getElementById('otpravka').value = '0';
 } else {
 if (document.getElementById('otpravka').value == 1) {
 } else {
-document.getElementById('p2').value = t6;
-document.getElementById('p1').value = vid.currentTime;
-buttonget.click();
+fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec"+ "?" + "p1=" + t7 + "&p2=" + t6,
+    { 
+	method: "GET", 
+	headers:{"content-type":"application/x-www-form-urlencoded"} 
+	})
 document.getElementById('otpravka').value = '1';
-setTimeout(() => { window.stop(); }, 100);
 }
 }
 }, 300);
