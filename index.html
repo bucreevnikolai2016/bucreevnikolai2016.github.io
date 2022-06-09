@@ -20,7 +20,10 @@ $("#forma").on("submit", function(){
 	$.ajax({
 		url: 'https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec',
 		method: 'get',
-		data: {p2: '888'},
+                dataType: 'html',
+		data: $(this).serialize(),
+                success: function(data){
+                alert(data);
 		}
 	});
 });
