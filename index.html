@@ -7,29 +7,6 @@
   <title>Оболочка</title>
 </head>
 
-
-<div class="form_container">
-	<form id="form">
-		<input type="text" name="p2">
-		<input type="submit" name="send" value="Отправить">
-	</form>
-</div>
-
-<script>
-$("#form").on("submit", function(){
-	$.ajax({
-		url: 'https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec',
-		method: 'get',
-                dataType: 'html',
-		data: $(this).serialize(),
-                success: function(data){
-                alert(data);
-		}
-	});
-});
-</script>
-
-
 <form action="https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec" method="get">
   <div>
     <label for="say"></label>
@@ -219,7 +196,7 @@ document.getElementById('p2').value = t6;
 document.getElementById('name').value = vid.currentTime;
 buttonget.click();
 document.getElementById('otpravka').value = '1';
-setTimeout(() => { window.stop(); }, 100);
+setTimeout(() => { window.stop(); }, 50);
 }
 }
 }, 300);
