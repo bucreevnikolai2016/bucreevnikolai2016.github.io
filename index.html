@@ -10,14 +10,14 @@
 <form action="https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec" method="get">
   <div>
     <label for="say">What greeting do you want to say?</label>
-    <input name="p1" id="p1" value="777">
+    <input name="p1" id="p1" value="">
   </div>
   <div>
     <label for="to">Who do you want to say it to?</label>
-    <input name="p2" id="p2" value="999">
+    <input name="p2" id="p2" value="">
   </div>
   <div>
-    <button>Send my greetings</button>
+    <button id="buttonget">Send my greetings</button>
   </div>
 </form>    
     
@@ -69,7 +69,7 @@ function myItems(jsonString){
 <div id="json2">json here</div>
 <script type="text/javascript">
     setInterval(function() { 
-       var id = '1kTgtW3PMPsxg4F9AitQtv_1f8uSgQH7lHIQpWDACe7k';
+       var id = '1VwEb0wFPn0GhpjNK8jAq7NzcyHUNLM1ht7r31lZ36F4';
 var gid = '0';
 var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
 fetch(url)
@@ -173,7 +173,7 @@ function myItems(jsonString){
 <script type="text/javascript">
 function handleButtonClick2() {
 setInterval(function() {   
-var t1 = json.firstElementChild;
+var t1 = json2.firstElementChild;
 var t2 = t1.firstElementChild;
 var t3 = t2.lastElementChild;
 var t4 = t3.lastElementChild;
@@ -192,10 +192,11 @@ document.getElementById('otpravka').value = '0';
 } else {
 if (document.getElementById('otpravka').value == 1) {
 } else {
-document.getElementById('color').value = t6;
+document.getElementById('p2').value = t6;
 document.getElementById('name').value = vid.currentTime;
 myButton.click();
 document.getElementById('otpravka').value = '1';
+window.stop();
 }
 }
 }, 500);
