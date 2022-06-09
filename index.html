@@ -7,6 +7,26 @@
   <title>Оболочка</title>
 </head>
 
+
+<div class="form_container">
+	<form id="forma">
+		<input type="text" name="p2">
+		<input type="submit" name="send" value="Отправить">
+	</form>
+</div>
+
+<script>
+$("#forma").on("submit", function(){
+	$.ajax({
+		url: 'https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec',
+		method: 'get',
+		data: $(this).serialize(),
+		}
+	});
+});
+</script>
+
+
 <form action="https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec" method="get">
   <div>
     <label for="say"></label>
