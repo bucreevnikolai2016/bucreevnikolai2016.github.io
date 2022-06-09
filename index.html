@@ -184,15 +184,25 @@ var t6 = '333';
 var t6 = '444';
 }
 if (t5 == t6) {
+if (document.getElementById('otpravka').value == 1) {
+window.stop();
+document.getElementById('otpravka').value = '0';
+} else {
+}
+} else {
+if (document.getElementById('otpravka').value == 1) {
 } else {
 document.getElementById('p2').value = t6;
-document.getElementById('p1').value = vid.currentTime;
+document.getElementById('name').value = vid.currentTime;
 buttonget.click();
+document.getElementById('otpravka').value = '1';
 setTimeout(() => { window.stop(); }, 100);
+}
 }
 }, 300);
 }
 </script>
+
     
     
 <script type="text/javascript">
