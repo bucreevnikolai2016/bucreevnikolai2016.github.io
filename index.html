@@ -31,39 +31,7 @@
     
 <video id="vid" controls="controls">
   <source src="http://kappa.stream.voidboost.cc/7/1/8/6/6/c187eb5d7037aaad458cea948c6fcaac:2022061017:UEpNRHpaUm8zQmJVYzczYjBONkFHWlJBTkd3bVNoWXk1VUJUT0ZNRzZjcWtyLzJwM3UyOGY4VEt3VTlZeWxXVU0vUmlvUXUyR0twTHpGblFKc1dnL21Kb0d1Z3Z1OGVvcFd4QjZENzgyb009/weolb.mp4" />
-</video>  
-
-<div id="json">json here</div>
-<script type="text/javascript">
-    setInterval(function() { 
-       var id = '1-RhP13Sji4kCRqdVfXDQjj1YBw2-P9MwfLqHcYe-8Ic';
-var gid = '0';
-var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
-fetch(url)
-  .then(response => response.text())
-  .then(data => document.getElementById("json").innerHTML=myItems(data.slice(47, -2))  
-  );
-function myItems(jsonString){
-  var json = JSON.parse(jsonString);
-  var table = '<table><tr>'
-  json.table.cols.forEach(colonne => table += '<th>' + colonne.label + '</th>')
-  table += '</tr>'
-  json.table.rows.forEach(ligne => {
-    table += '<tr>'
-    ligne.c.forEach(cellule => {
-        try{var valeur = cellule.f ? cellule.f : cellule.v}
-        catch(e){var valeur = ''}
-        table += '<td>' + valeur + '</td>'
-      }
-    )
-    table += '</tr>'
-    }
-  )
-  table += '</table>'
-  return table
-}
-      }, 1000);
-    </script>       
+</video>        
     
     
 <div id="json2">json here</div>
@@ -97,66 +65,6 @@ function myItems(jsonString){
 }
       }, 300);
     </script>       
-    
-  
-    
- 
-   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-   <!-- Style The Contact Form How Ever You Prefer -->
-   <link rel="stylesheet" href="style.css">
-
-  <form style="display:none" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbwbQU4nYcCNqSHRjf4edmo183P90LBMKkJQ8FMTEfuE8X3DNmhORS2BMgraeIPCtUNf/exec">
-    <!-- change the form action to your script url -->
-
-    <div id="mydiv" class="form-elements">
-      <fieldset class="pure-group">
-      <label for="name">Name: </label>
-      <input id="name" name="name" placeholder="What your Mom calls you" />
-      </fieldset>
-      <fieldset class="pure-group">
-      <label for="color">Favourite Color: </label>
-      <input id="color" name="color" placeholder="green" />
-      </fieldset>
-
-      <button id="myButton" class="button-success pure-button button-xlarge">
-        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-    </div>
-
-    </form>
-        
-<form style="display:none" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
-  action="https://script.google.com/macros/s/AKfycbxe8NRPTBi8PmpqnI1mPox2j_GInzIdl-6xVJ2ZKTWVIp9-Qxx19IA0iB8zu2WEix45/exec">
-    <!-- change the form action to your script url -->
-
-    <div id="mydiv2" class="form-elements">
-      <fieldset class="pure-group">
-      <label for="name">Name: </label>
-      <input id="name2" name="name" placeholder="What your Mom calls you" />
-      </fieldset>
-      <fieldset class="pure-group">
-      <label for="color">Favourite Color: </label>
-      <input id="color2" name="color" placeholder="green" />
-      </fieldset>
-
-      <button id="myButton5" class="button-success pure-button button-xlarge">
-        <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
-    </div>
-
-    </form>    
-    
-    
-<script data-cfasync="false" src="form-submission-handler.js"></script>    
-    
-<script type="text/javascript">
-    setInterval(function() {     
-    document.getElementById("mydiv").style="";
-    document.getElementById('myButton').disabled = false;
-    document.getElementById("mydiv2").style="";
-    document.getElementById('myButton2').disabled = false;        
-      }, 500);
-    </script>  
 
 <script type="text/javascript">    
   window.onload = init;
@@ -216,9 +124,7 @@ document.getElementById('otpravka').value = '1';
   var p4 = p3.lastElementChild;
   var p5 = p4.innerHTML;
   var p6=p4.previousElementSibling;
-  var p7=p6.previousElementSibling;
-  var p8=p7.previousElementSibling;
-  var p9 = p8.innerHTML;
+  var p9 = p6.innerHTML;
   if (vid.paused) {
   var p10 = '333';
   } else {
@@ -241,7 +147,7 @@ document.getElementById('otpravka').value = '1';
     
 <script type="text/javascript">
 setInterval(function() {
-var xxx = json.firstElementChild;
+var xxx = json2.firstElementChild;
 var vvv = xxx.firstElementChild;
 var bbb = vvv.lastElementChild;
 var zzz = bbb.lastElementChild;
