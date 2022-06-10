@@ -68,18 +68,13 @@ function myItems(jsonString){
 <script type="text/javascript">
 function handleButtonClick2() {
 setInterval(function() {   
-var t1 = json2.firstElementChild;
-var t2 = t1.firstElementChild;
-var t3 = t2.lastElementChild;
-var t4 = t3.lastElementChild;
-var t5 = t4.innerHTML;
 var t7 = vid.currentTime;
+var t8 = document.getElementById('emylast').value;
 if (vid.paused) {
 var t6 = '333';
 } else {
 var t6 = '444';
 }
-var t8 = document.getElementById('emylast').value;
 if (t8 == t6) {
 if (document.getElementById('otpravka').value == 1) {
 document.getElementById('otpravka').value = '0';
