@@ -108,6 +108,19 @@ document.getElementById('emylast').value = t6;
   var p5 = p4.innerHTML;
   var p6=p4.previousElementSibling;
   var p9 = p6.innerHTML;
+var g1 = p3.previousElementSibling;
+var g2 = g1.lastElementChild;
+var g3 = g2.innerHTML;
+var g4 = g2.previousElementSibling;
+var g5 = g4.innerHTML;
+var y1 = p9 - g5;
+var y2 = Math.abs(y1);
+if (y2 < 1) {
+if (g5 > p9) {
+var p9 = g5;
+var p5 = g3;
+}
+}
   if (vid.paused) {
   var p10 = '333';
   } else {
