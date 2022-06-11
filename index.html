@@ -14,7 +14,8 @@
     
 <input id="myinput" name="myinput" value=""/>    
 <input id="otpravka" name="otpravka" value=""/>   
-<input id="emylast" name="emylast" value=""/>   
+<input id="emylast" name="emylast" value=""/>  
+<input id="timeoutotp" name="timeoutotp" value=""/>   
     
 <video id="vid" controls="controls">
   <source src="http://rocker.stream.voidboost.cc/5/0/5/4/1/2/15cf2521c58911f18e45a738d0fa5b05:2022061204:dUp6S04zc0JmOHhuRGx0eEVoL3Z6dmF4QlJKbXhpejJXZGx5RGRlNm55QlZBTUE0VElxL3BUbVY2OFZwTTI3SG0vanhGdEdTYXhPbytEZ1FadGVIdGc9PQ==/h804t.mp4" />
@@ -83,6 +84,7 @@ document.getElementById('otpravka').value = '0';
 } else {
 if (document.getElementById('otpravka').value == 1) {
 } else {
+if (document.getElementById('timeoutotp').value == 0) {
 fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec"+ "?" + "p1=" + t7 + "&p2=" + t6,
     { 
 	method: "GET", 
@@ -90,6 +92,10 @@ fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38
 	})
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
+document.getElementById('timeoutotp').value = '1';
+setTimeout(() => { document.getElementById('timeoutotp').value = '0'; }, 500);
+} else {
+setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec"+ "?" + "p1=" + t7 + "&p2=" + t6, { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) document.getElementById('otpravka').value = '1'; document.getElementById('emylast').value = t6; document.getElementById('timeoutotp').value = '1'; setTimeout(() => { document.getElementById('timeoutotp').value = '0'; }, 500); }, 100);
 }
 }
 }, 10);
