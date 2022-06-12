@@ -70,6 +70,7 @@ function myItems(jsonString){
 function handleButtonClick2() {
 setInterval(function() {   
 var t7 = vid.currentTime;
+var t9 = t7 + 1.5;
 var t8 = document.getElementById('emylast').value;
 if (vid.paused) {
 var t6 = '333';
@@ -91,7 +92,7 @@ fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38
 	headers:{"content-type":"application/x-www-form-urlencoded"} 
 	})
 } else {
-setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec"+ "?" + "p1=" + t7 + "&p2=" + t6, { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) }, 1500);
+setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hiJLaNocWzqcMWXBtnG38S5xCHqUzyHu8XXhp98tP0w2EKMznGt9pbpzw/exec"+ "?" + "p1=" + t9 + "&p2=" + t6, { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) }, 1500);
 }
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
