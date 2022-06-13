@@ -73,14 +73,14 @@ function sleep(ms) {
 }
 async function delayedGreeting() {
   var t1 = vid.currentTime;
-  await sleep(500);
+  await sleep(50);
   var t2 = vid.currentTime;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
   if (t4 > 1) {console.log(1)};
 }
 delayedGreeting();
-}, 1000);
+}, 100);
 </script> 
 	
 	
