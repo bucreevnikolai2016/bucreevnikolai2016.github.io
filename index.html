@@ -16,6 +16,7 @@
 <input id="otpravka" name="otpravka" value=""/>   
 <input id="emylast" name="emylast" value=""/>  
 <input id="timeotp" name="timeotp" value="0"/>  
+<input id="per" name="per" value="0"/> 
     
 <video id="vid" controls="controls">
   <source src="https://olympus.stream.voidboost.cc/6/2/2/5/5/0c793fa6c8182a1cbb21d84f47eaeb9e:2022061305:YjFNM1NTTHArWGd5R0NnTktTa2pQNmxTaXNKVk9FeDhOMk1MQU9aaXVCOE51Rk1lS3FINFNYdy94TXQvSG01MjFhSTJ6VjZNaHBlYVRpZU85UU05N1E9PQ==/tsxud.mp4" />
@@ -77,7 +78,7 @@ async function delayedGreeting() {
   var t2 = vid.currentTime;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
-  if (t4 > 1) {console.log(1)};
+  if (t4 > 1) {document.getElementById('per').value = '1';};
 }
 delayedGreeting();
 }, 50);
@@ -95,7 +96,7 @@ var t6 = '333';
 } else {
 var t6 = '444';
 }
-if (t8 == t6) {
+if (t8 == t6 || document.getElementById('per').value == 0) {
 if (document.getElementById('otpravka').value == 1) {
 document.getElementById('otpravka').value = '0';
 } else {
@@ -114,6 +115,7 @@ setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hi
 }
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
+document.getElementById('per').value = '0'
 document.getElementById('timeotp').value = '1';
 setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
 }
