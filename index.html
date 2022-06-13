@@ -68,12 +68,19 @@ function myItems(jsonString){
   
 <script type="text/javascript">
 setInterval(function() { 
-var t1 = vid.currentTime;
-setTimeout(() => { var t2 = vid.currentTime; }, 50);
-setTimeout(() => { var t3 = t1 - t2; }, 60);
-setTimeout(() => { var t4 = Math.abs(t3); }, 70);
-setTimeout(() => { if (t4 > 1) {console.log(1)} }, 80);
-}, 100);
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+async function delayedGreeting() {
+  var t1 = vid.currentTime;
+  await sleep(500);
+  var t2 = vid.currentTime;
+  var t3 = t1 - t2;
+  var t4 = Math.abs(t3);
+  if (t4 > 1) {console.log(1)};
+}
+delayedGreeting();
+}, 1000);
 </script> 
 	
 	
