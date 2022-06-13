@@ -17,6 +17,7 @@
 <input id="emylast" name="emylast" value=""/>  
 <input id="timeotp" name="timeotp" value="0"/>  
 <input id="per" name="per" value="0"/> 
+<input id="pertime" name="pertime" value=""/> 
     
 <video id="vid" controls="controls">
   <source src="http://rocker.stream.voidboost.cc/5/0/5/4/1/2/13bb8632c1d155e3dbd72307c082e9d1:2022061408:bGIvWlBrZVhMVy9WYzR4ZEdVUlZwYXkvR29MZjVJL2x6Q3VyNFJ5b0I3bXZuL25TTUJ3b0E2N2RuY1RXSmZ2a0dPRjdYSHJlaGUrSnAzRlRnRzJ0NG00ejFiTURyTXFVbFhwZjAvWFI3ZVE9/h804t.mp4" />
@@ -73,6 +74,11 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function delayedGreeting() {
+  if (vid.paused) {
+  document.getElementById('pertime').value = '333';
+  } else {
+  document.getElementById('pertime').value = '444';
+  }
   var t1 = vid.currentTime;
   await sleep(50);
   var t2 = vid.currentTime;
@@ -95,6 +101,9 @@ if (vid.paused) {
 var t6 = '333';
 } else {
 var t6 = '444';
+}
+if (document.getElementById('per').value == 1) {
+var t6 = document.getElementById('pertime').value;
 }
 if (document.getElementById('per').value == 0 || t8 == t6) {
 if (document.getElementById('otpravka').value == 1) {
