@@ -73,13 +73,14 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function delayedGreeting() {
+  if (vid.paused) {var p10 = '333';}
   var t1 = vid.currentTime;
   await sleep(50);
   var t2 = vid.currentTime;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
   var u1 = '0';
-  if (t4 > 1 & vid.paused) {vid.play(); var u1 = '1'; console.log(1);};
+  if (t4 > 1 & p10 == 333) {vid.play(); var u1 = '1'; console.log(1);};
   if (t4 > 1 & u1 == 0) {vid.pause(); console.log(2);};
 }
 delayedGreeting();
