@@ -79,6 +79,7 @@ async function delayedGreeting() {
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
   if (t4 > 1 & vid.paused) {vid.play();};
+  if (t4 > 1 & !vid.paused) {vid.pause();};
 }
 delayedGreeting();
 }, 50);
