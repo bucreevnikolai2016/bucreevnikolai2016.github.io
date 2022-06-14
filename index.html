@@ -96,7 +96,7 @@ var t6 = '333';
 } else {
 var t6 = '444';
 }
-if (t8 == t6 || document.getElementById('per').value == 0) {
+if (t8 == t6) {
 if (document.getElementById('otpravka').value == 1) {
 document.getElementById('otpravka').value = '0';
 } else {
@@ -115,7 +115,6 @@ setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hi
 }
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
-document.getElementById('per').value = '0';
 document.getElementById('timeotp').value = '1';
 setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
 }
