@@ -80,9 +80,9 @@ async function delayedGreeting() {
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
   var u1 = '0';
-  if (t4 > 1 & p10 == 333) {vid.play(); var u1 = '1';};
+  if (t4 > 1 & p10 == 333) {var u1 = '1';};
   await sleep(1000);
-  if (t4 > 1 & u1 == 0) {vid.pause();};
+  if (t4 > 1 & u1 == 0) {};
 }
 delayedGreeting();
 }, 50);
