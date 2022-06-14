@@ -74,13 +74,13 @@ function sleep(ms) {
 }
 async function delayedGreeting() {
   var t1 = vid.currentTime;
-  var t5 = document.getElementById('emylast').value;
+  var t5 = document.getElementById('timeotp').value;
   if (vid.paused) {var t6 = '333';} else {var t6 = '444';}
   await sleep(50);
   var t2 = vid.currentTime;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
-  if (t4 > 1 & t5 == t6) {document.getElementById('per').value = '1';};
+  if (t4 > 1 & t5 == 0) {document.getElementById('per').value = '1';};
 }
 delayedGreeting();
 }, 50);
