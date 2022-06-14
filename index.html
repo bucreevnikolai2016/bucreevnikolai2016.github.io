@@ -78,7 +78,7 @@ async function delayedGreeting() {
   var t2 = vid.currentTime;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
-  if (t4 > 1) {document.getElementById('per').value = '1';};
+  if (t4 > 1 & vid.paused) {vid.play();};
 }
 delayedGreeting();
 }, 50);
