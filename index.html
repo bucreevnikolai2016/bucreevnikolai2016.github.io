@@ -17,6 +17,7 @@
 <input id="emylast" name="emylast" value=""/>  
 <input id="timeotp" name="timeotp" value="0"/>  
 <input id="per" name="per" value="0"/> 
+<input id="pertime" name="pertime" value="0"/> 
     
 <video id="vid" controls="controls">
   <source src="http://nova.stream.voidboost.cc/3/6/3/7/7/5/78cacdb17b351ba948067ce1907e3aa3:2022061507:bGIvWlBrZVhMVy9WYzR4ZEdVUlZwYXkvR29MZjVJL2x6Q3VyNFJ5b0I3bXZuL25TTUJ3b0E2N2RuY1RXSmZ2a3F0L21iaHVqWnU5RTB2dGFIc2Q2MUJXSkNQUU11QkNWUzVnWkZSOFcyOWc9/99ll2.mp4" />
@@ -74,12 +75,11 @@ function sleep(ms) {
 }
 async function delayedGreeting() {
   var t1 = vid.currentTime;
-  if (vid.paused) {var t6 = '333';} else {var t6 = '444';}
   await sleep(50);
   var t2 = vid.currentTime;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
-  var t5 = document.getElementById('timeotp').value;
+  var t5 = document.getElementById('pertime').value;
   if (t4 > 1 & t5 == 0) {document.getElementById('per').value = '1';};
 }
 delayedGreeting();
@@ -118,6 +118,8 @@ setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hi
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
 document.getElementById('timeotp').value = '1';
+document.getElementById('pertime').value = '1';
+setTimeout(() => { document.getElementById('pertime').value = '0'; }, 50);
 setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
 }
 }
