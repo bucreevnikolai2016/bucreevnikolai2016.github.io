@@ -73,16 +73,12 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 async function delayedGreeting() {
-  if (vid.paused) {var p10 = '333';}
   var t1 = vid.currentTime;
   await sleep(50);
   var t2 = vid.currentTime;
   var t3 = t1 - t2;
   var t4 = Math.abs(t3);
-  var u1 = '0';
-  if (t4 > 1 & p10 == 333) {var u1 = '1';};
-  await sleep(1000);
-  if (t4 > 1 & u1 == 0) {};
+  if (t4 > 1) {document.getElementById('per').value = '1';};
 }
 delayedGreeting();
 }, 50);
@@ -100,7 +96,7 @@ var t6 = '333';
 } else {
 var t6 = '444';
 }
-if (t8 == t6) {
+if (t8 == t6 || document.getElementById('per').value == 0) {
 if (document.getElementById('otpravka').value == 1) {
 document.getElementById('otpravka').value = '0';
 } else {
@@ -119,6 +115,7 @@ setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbw2Lc_7vQfP6hi
 }
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
+document.getElementById('per').value = '0';
 document.getElementById('timeotp').value = '1';
 setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
 }
