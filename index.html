@@ -18,6 +18,7 @@
 <input id="per" name="per" value="0"/> 
 <input id="pertime" name="pertime" value="0"/> 
 <input id="sinh" name="sinh" value="0"/> 
+<input id="ypr" name="ypr" value=""/> 
     
 <video id="vid">
   <source src="http://nova.stream.voidboost.cc/3/6/3/7/7/5/78cacdb17b351ba948067ce1907e3aa3:2022061507:bGIvWlBrZVhMVy9WYzR4ZEdVUlZwYXkvR29MZjVJL2x6Q3VyNFJ5b0I3bXZuL25TTUJ3b0E2N2RuY1RXSmZ2a3F0L21iaHVqWnU5RTB2dGFIc2Q2MUJXSkNQUU11QkNWUzVnWkZSOFcyOWc9/99ll2.mp4" />
@@ -173,35 +174,24 @@ setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
   var p3 = p2.lastElementChild;
   var p4 = p3.lastElementChild;
   var p5 = p4.innerHTML;
-  var p6=p4.previousElementSibling;
+  var p6 = p4.previousElementSibling;
   var p9 = p6.innerHTML;
-var g1 = p3.previousElementSibling;
-var g2 = g1.lastElementChild;
-var g3 = g2.innerHTML;
-var g4 = g2.previousElementSibling;
-var g5 = g4.innerHTML;
-var y1 = p9 - g5;
-var y2 = Math.abs(y1);
-if (y2 < 1) {
-if (g5 > p9) {
-var p9 = g5;
-var p5 = g3;
-}
-}
   if (vid.paused) {
   var p10 = '333';
   } else {
   var p10 = '444';
   }
-  if (p10 == p5) {
-  } else {
+  var p11 = document.getElementById('ypr').value;
+  if (p10 != p5 || p9 != p11) {
   if (p5 == 333) {
   vid.pause();
   vid.currentTime = p9;
+  document.getElementById('ypr').value = p9;
   } 
   if (p5 == 444) {
   vid.play();
   vid.currentTime = p9;
+  document.getElementById('ypr').value = p9;
   }
   }
           }, 10);
