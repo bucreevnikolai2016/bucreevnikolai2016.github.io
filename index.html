@@ -39,7 +39,10 @@ output.innerHTML = this.value;
 
 <script type="text/javascript">
 setInterval(function() {
-var v1 = document.getElementById('demo').value / 100;
+var input = document.getElementById("demo");
+var text = input.innerHTML;
+var v1 = text / 100;
+vid.volume = v1;
 }, 300);
 </script>  	
     
