@@ -43,14 +43,7 @@ output.innerHTML = this.value;
 </script>	
 
 <script type="text/javascript">
-function volume() {
-setInterval(function() {
-var input = document.getElementById("demo");
-var text = input.innerHTML;
-var v1 = text / 100;
-vid.volume = v1;
-}, 300);
-}
+var interval = setInterval(function() { var input = document.getElementById("demo"); var text = input.innerHTML; var v1 = text / 100; vid.volume = v1; }, 300);
 </script>  	
     
     
