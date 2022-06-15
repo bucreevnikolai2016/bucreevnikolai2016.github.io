@@ -25,7 +25,7 @@
 	
 <div class="slidecontainer">
   <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-  <p id="pp">Volume: <span id="demo"></span></p>
+  <p id="pp" style="display: none">Volume: <span id="demo" style="display: none"></span></p>
 </div>
 	
 <script>
@@ -113,8 +113,6 @@ delayedGreeting();
 <script type="text/javascript">
 function handleButtonClick2() {
 document.getElementById('myRange').style.display = 'none';
-document.getElementById('demo').style.display = 'none';
-document.getElementById('pp').style.display = 'none';
 document.getElementById('vid').controls =  true;
 setInterval(function() {   
 var t7 = vid.currentTime;
