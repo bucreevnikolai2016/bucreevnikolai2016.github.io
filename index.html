@@ -125,8 +125,13 @@ var p2 = p1.firstElementChild;
 var p3 = p2.lastElementChild;
 var p4 = p3.lastElementChild;
 var p5 = p4.innerHTML;
+var p6 = p5.slice(-11);
+var p7 = "https://www.youtube.com/live_chat?v=" + p6 + "&embed_domain=bucreevnikolai2016.github.io&dark_theme=1";
 if (document.getElementById("youtube").src != p5) {
 document.getElementById("youtube").src = p5;
+}
+if (document.getElementById("chat").src != p7) {
+document.getElementById("chat").src = p7;
 }
 }, 300);
 </script>  
