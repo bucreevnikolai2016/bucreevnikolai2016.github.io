@@ -47,10 +47,43 @@ position: absolute;
 left: 0px;
 top: 585px;
 }
+.sum {
+z-index: 100;
+position: absolute;
+left: 0px;
+top: 605px;
+}
+.sub {
+z-index: 100;
+position: absolute;
+left: 0px;
+top: 625px;
+}
 .slider {
 width: 70px;
 }
 </style>  
+	
+<button class="sum" id="sum" >Окно в полный   экран</button>
+<button class="sub" id="sub" >Стандартный экран</button>
+<script>
+	document.querySelector('#sum').addEventListener('click', function(){
+        if(document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen();
+        }
+        else{
+            document.documentElement.mozRequestFullScreen();
+        }
+});
+document.querySelector('#sub').addEventListener('click', function(){
+    if(document.documentElement.webkitRequestFullscreen) {
+        document.webkitCancelFullScreen()
+   }
+    else{
+        document.mozCancelFullScreen();
+    }
+});
+    </script>	
 
 <input id="ypr" style="display: none" name="ypr" value=""/> 
 
