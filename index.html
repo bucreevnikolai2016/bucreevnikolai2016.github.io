@@ -6,20 +6,56 @@
     <meta name="description" content="contact form example">
   <title>Оболочка</title>
 </head>
-    
-    
-<button class="myButton2" id="myButton2" type="button">Админ мод</button>   
-<button class="myButton3" id="myButton3" type="button">Пользователь мод (ПП)</button> 
-<button id="myButton4" style="display: none" type="button">Пользователь мод (ПЕР)</button>  
-       
-<input id="otpravka" style="display: none" name="otpravka" value=""/>   
-<input id="emylast" style="display: none" name="emylast" value=""/>  
-<input id="timeotp" style="display: none" name="timeotp" value="0"/>  
-<input id="per" style="display: none" name="per" value="0"/> 
-<input id="pertime" style="display: none" name="pertime" value="0"/> 
-<input id="sinh" style="display: none" name="sinh" value="0"/> 
+
+<style>
+body {
+    background-color: #2F4F4F;
+}
+.vid {
+z-index: 0;
+position: absolute;
+left: 0px;
+top: 0px;
+}
+.youtube {
+z-index: 0;
+position: absolute;
+left: 1000px;
+top: 0px;
+}
+.chat {
+z-index: 0;
+position: absolute;
+left: 1000px;
+top: 205px;
+}
+.slidecontainer {
+z-index: 100;
+position: absolute;
+left: 0px;
+top: 0px;
+}
+.myButton2 {
+z-index: 100;
+position: absolute;
+left: 0px;
+top: 563px;
+}
+.myButton3 {
+z-index: 100;
+position: absolute;
+left: 0px;
+top: 585px;
+}
+.json2 {
+z-index: 100;
+position: absolute;
+left: 0px;
+top: 563px;
+</style>  
+
 <input id="ypr" style="display: none" name="ypr" value=""/> 
-    
+
 <iframe class="youtube" id="youtube" width="365" height="205.3125" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe class="chat" id="chat" width="360" height="353" src=""></iframe> 
@@ -52,7 +88,6 @@ vid.volume = v1;
 } 
 }, 300);
 </script>  	
-    
  
 <div style="display: none" class="json" id="json">json here</div>
 <script type="text/javascript">
@@ -140,6 +175,53 @@ document.getElementById("vid").src = p9;
 }
 }, 300);
 </script>  
+    
+<script type="text/javascript">
+  function handleButtonClick3() {
+  setInterval(function() {
+  var p1 = json2.firstElementChild;
+  var p2 = p1.firstElementChild;
+  var p3 = p2.lastElementChild;
+  var p4 = p3.lastElementChild;
+  var p5 = p4.innerHTML;
+  var p6 = p4.previousElementSibling;
+  var p9 = p6.innerHTML;
+  if (vid.paused) {
+  var p10 = '0';
+  } else {
+  var p10 = '1';
+  }
+  var p11 = document.getElementById('ypr').value;
+  if (p10 != p5 || p9 != p11) {
+  if (p5 == 0) {
+  vid.pause();
+  vid.currentTime = p9;
+  document.getElementById('ypr').value = p9;
+  } 
+  if (p5 == 1) {
+  vid.play();
+  vid.currentTime = p9;
+  document.getElementById('ypr').value = p9;
+  }
+  }
+          }, 10);
+  }
+    </script>    
+          
+
+
+
+
+<button class="myButton2" id="myButton2" type="button">Админ мод</button>   
+<button class="myButton3" id="myButton3" type="button">Пользователь мод (ПП)</button> 
+<button id="myButton4" style="display: none" type="button">Пользователь мод (ПЕР)</button>  
+       
+<input id="otpravka" style="display: none" name="otpravka" value=""/>   
+<input id="emylast" style="display: none" name="emylast" value=""/>  
+<input id="timeotp" style="display: none" name="timeotp" value="0"/>  
+<input id="per" style="display: none" name="per" value="0"/> 
+<input id="pertime" style="display: none" name="pertime" value="0"/> 
+<input id="sinh" style="display: none" name="sinh" value="0"/> 
  
 <script type="text/javascript">    
   window.onload = init;
@@ -171,13 +253,11 @@ delayedGreeting();
 }, 50);
 </script> 
 	
-	
 <script type="text/javascript">
 setInterval(function() {
 document.getElementById('sinh').value = '1';
 }, 30000);
 </script>  
-	
 	
 <script type="text/javascript">
 function handleButtonClick2() {
@@ -224,88 +304,5 @@ setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
 }, 10);
 }
 </script>
-
-    
-    
-<script type="text/javascript">
-  function handleButtonClick3() {
-  setInterval(function() {
-  var p1 = json2.firstElementChild;
-  var p2 = p1.firstElementChild;
-  var p3 = p2.lastElementChild;
-  var p4 = p3.lastElementChild;
-  var p5 = p4.innerHTML;
-  var p6 = p4.previousElementSibling;
-  var p9 = p6.innerHTML;
-  if (vid.paused) {
-  var p10 = '0';
-  } else {
-  var p10 = '1';
-  }
-  var p11 = document.getElementById('ypr').value;
-  if (p10 != p5 || p9 != p11) {
-  if (p5 == 0) {
-  vid.pause();
-  vid.currentTime = p9;
-  document.getElementById('ypr').value = p9;
-  } 
-  if (p5 == 1) {
-  vid.play();
-  vid.currentTime = p9;
-  document.getElementById('ypr').value = p9;
-  }
-  }
-          }, 10);
-  }
-    </script>    
-        
-
-<style>
-body {
-    background-color: #2F4F4F;
-}
-.vid {
-z-index: 0;
-position: absolute;
-left: 0px;
-top: 0px;
-}
-.youtube {
-z-index: 0;
-position: absolute;
-left: 1000px;
-top: 0px;
-}
-.chat {
-z-index: 0;
-position: absolute;
-left: 1000px;
-top: 205px;
-}
-.slidecontainer {
-z-index: 100;
-position: absolute;
-left: 0px;
-top: 0px;
-}
-.myButton2 {
-z-index: 100;
-position: absolute;
-left: 0px;
-top: 563px;
-}
-.myButton3 {
-z-index: 100;
-position: absolute;
-left: 0px;
-top: 585px;
-}
-.json2 {
-z-index: 100;
-position: absolute;
-left: 0px;
-top: 563px;
-</style> 
-
 
 </html>
