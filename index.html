@@ -134,9 +134,9 @@ var t7 = vid.currentTime;
 var t9 = t7 + 1.5;
 var t8 = document.getElementById('emylast').value;
 if (vid.paused) {
-var t6 = '333';
+var t6 = '0';
 } else {
-var t6 = '444';
+var t6 = '1';
 }
 if (t8 == t6) {
 if (document.getElementById('otpravka').value == 1) {
@@ -183,18 +183,18 @@ setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
   var p6 = p4.previousElementSibling;
   var p9 = p6.innerHTML;
   if (vid.paused) {
-  var p10 = '333';
+  var p10 = '0';
   } else {
-  var p10 = '444';
+  var p10 = '1';
   }
   var p11 = document.getElementById('ypr').value;
   if (p10 != p5 || p9 != p11) {
-  if (p5 == 333) {
+  if (p5 == 0) {
   vid.pause();
   vid.currentTime = p9;
   document.getElementById('ypr').value = p9;
   } 
-  if (p5 == 444) {
+  if (p5 == 1) {
   vid.play();
   vid.currentTime = p9;
   document.getElementById('ypr').value = p9;
