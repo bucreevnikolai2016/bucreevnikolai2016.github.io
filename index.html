@@ -126,11 +126,7 @@ document.getElementById('sinh').value = '1';
 	
 <script type="text/javascript">
 function handleButtonClick2() {
-fetch("https://script.google.com/macros/s/AKfycbxqX-gP8k6wGjEOiPTkhh0UNFnMDv9UlmUWAKP7ihHuA6Hh7SXafabgiucAMH1RYdyGDQ/exec"+ "?" + "p3=1",
-    { 
-	method: "GET", 
-	headers:{"content-type":"application/x-www-form-urlencoded"} 
-	})
+setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbxqX-gP8k6wGjEOiPTkhh0UNFnMDv9UlmUWAKP7ihHuA6Hh7SXafabgiucAMH1RYdyGDQ/exec"+ "?" + "p3=1", { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) }, 1500);
 document.getElementById('myRange').style.display = 'none';
 document.getElementById('vid').controls =  true;
 setInterval(function() {   
