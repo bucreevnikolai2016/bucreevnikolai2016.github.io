@@ -118,8 +118,13 @@ function myItems(jsonString){
       }, 300);
     </script>    
 
- <script>
-document.getElementById("youtube").src="https://www.youtube.com/embed/L_WMy4aCJKY";
+<script>
+var p1 = json.firstElementChild;
+var p2 = p1.firstElementChild;
+var p3 = p2.lastElementChild;
+var p4 = p3.lastElementChild;
+var p5 = p4.innerHTML;
+document.getElementById("youtube").src=p5;
 </script>  
  
 <script type="text/javascript">    
