@@ -32,11 +32,9 @@ top: 0px;
 .chat {
 z-index: 10;
 position: absolute;
-left: 1000px;
 top: 205px;
 opacity: 0.5;
-width: 366px;
-height: 530px;
+left: 1000px;
 }
 .slidecontainer {
 z-index: 100;
@@ -116,6 +114,9 @@ var chat = document.getElementById("chat");
 var shirchat = shirok * 0.26793557;
 var vischat = visok * 0.69010416;
 var leftchat = shirok * 0.73206442;
+chat.style.left = lefchat + "px";
+chat.style.width = shirchat + "px";
+chat.style.height = vischat + "px";
 }, 300);
 </script> 
 
