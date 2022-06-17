@@ -135,7 +135,20 @@ var v1 = text / 100;
 vid.volume = v1; 
 } 
 }, 300);
-</script>  	
+</script>  
+
+
+<script type="text/javascript">
+setInterval(function() { 
+var vid = document.getElementById("vid");
+var shirok = window.innerWidth;
+var shirvid = shirok * 0.26793557;
+var visvid = shirvid / 1.77777777;
+vid.style.width = shirvid;
+vid.style.height = visvid;
+}, 300);
+</script> 
+	
  
 <div style="display: none" class="json" id="json">json here</div>
 <script type="text/javascript">
