@@ -27,22 +27,13 @@ top: 0px;
 width: 1366px;
 height: 768px;
 }
-}
-@media screen and (min-width: 1280px) and (max-width: 1280px){
-.vid {
-z-index: 0;
-position: absolute;
-left: 0px;
-top: 0px;
-width: 1280px;
-height: 720px;
-}
-}
 .youtube {
 z-index: 10;
 position: absolute;
 left: 1000px;
 top: 0px;
+width: 366px;
+height: 205.875px;
 }
 .chat {
 z-index: 10;
@@ -50,6 +41,8 @@ position: absolute;
 left: 1000px;
 top: 205px;
 opacity: 0.5;
+width: 366px;
+height: 356px;
 }
 .slidecontainer {
 z-index: 100;
@@ -84,6 +77,17 @@ top: 830px;
 .slider {
 width: 70px;
 }
+}
+@media screen and (min-width: 1280px) and (max-width: 1280px){
+.vid {
+z-index: 0;
+position: absolute;
+left: 0px;
+top: 0px;
+width: 1280px;
+height: 720px;
+}
+}
 </style>  
 	
 <button class="sum" id="sum" >Окно в полный   экран</button>
@@ -109,9 +113,9 @@ document.querySelector('#sub').addEventListener('click', function(){
 
 <input id="ypr" style="display: none" name="ypr" value=""/> 
 
-<iframe class="youtube" id="youtube" width="366" height="205.875" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" id="youtube" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<iframe class="chat" id="chat" style="border:0" width="366" height="356" src=""></iframe> 
+<iframe class="chat" id="chat" style="border:0" src=""></iframe> 
 
 <video class="vid" id="vid">
   <source src="" />
