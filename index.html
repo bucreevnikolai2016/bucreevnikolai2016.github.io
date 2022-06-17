@@ -27,7 +27,6 @@ top: 0px;
 .youtube {
 z-index: 10;
 position: absolute;
-left: 1000px;
 top: 0px;
 }
 .chat {
@@ -136,12 +135,14 @@ vid.volume = v1;
 
 <script type="text/javascript">
 setInterval(function() { 
-var vid = document.getElementById("youtube");
+var you = document.getElementById("youtube");
 var shirok = window.innerWidth;
-var shirvid = shirok * 0.26793557;
-var visvid = shirvid / 1.77777777;
-vid.width = shirvid;
-vid.height = visvid;
+var left = shirok * 0.73206442;
+var shiryou = shirok * 0.26793557;
+var visyou = shiryou / 1.77777777;
+you.style.left = left;
+you.width = shiryou;
+you.height = visyou;
 }, 300);
 </script> 
 	
