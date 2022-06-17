@@ -67,12 +67,14 @@ z-index: 100;
 position: absolute;
 left: 200px;
 top: 810px;
+font-size: 7px;
 }
 .sub {
 z-index: 100;
 position: absolute;
 left: 0px;
 top: 830px;
+font-size: 7px;
 }
 .slider {
 width: 70px;
@@ -80,8 +82,8 @@ width: 70px;
 }
 </style>  
 	
-<button class="sum" style="font-size:7px" id="sum" >┏ ┓<br />┗ ┛</button>
-<button class="sub" style="font-size:7px" id="sub" >┛┗<br />┓┏</button>
+<button class="sum" id="sum" >┏ ┓<br />┗ ┛</button>
+<button class="sub" id="sub" >┛┗<br />┓┏</button>
 <script>
 	document.querySelector('#sum').addEventListener('click', function(){
         if(document.documentElement.webkitRequestFullscreen) {
