@@ -75,6 +75,23 @@ font-size: 7px;
 width: 70px;
 }
 </style>  
+
+<script type="text/javascript">
+setInterval(function() { 
+var you = document.getElementById("youtube");
+var shirok = window.innerWidth;
+var left = shirok * 0.73206442;
+var shiryou = shirok * 0.26793557;
+var visyou = shiryou / 1.77777777;
+you.style.left = left + "px";
+you.style.width = shiryou + "px";
+you.style.height = visyou + "px";
+var vid = document.getElementById("vid");
+var visvid = shirok / 1.77777777;
+vid.style.width = shirok + "px";
+vid.style.height = visvid + "px";
+}, 300);
+</script> 
 	
 <button class="sum" id="sum" >┏ ┓<br />┗ ┛</button>
 <button class="sub" id="sub" >┛┗<br />┓┏</button>
@@ -130,22 +147,7 @@ var v1 = text / 100;
 vid.volume = v1; 
 } 
 }, 300);
-</script>  
-
-
-<script type="text/javascript">
-setInterval(function() { 
-var you = document.getElementById("youtube");
-var shirok = window.innerWidth;
-var left = shirok * 0.73206442;
-var shiryou = shirok * 0.26793557;
-var visyou = shiryou / 1.77777777;
-you.style.left = left + "px";
-you.style.width = shiryou + "px";
-you.style.height = visyou + "px";
-}, 300);
-</script> 
-	
+</script> 	
  
 <div style="display: none" class="json" id="json">json here</div>
 <script type="text/javascript">
