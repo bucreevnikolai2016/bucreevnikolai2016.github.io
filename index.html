@@ -11,8 +11,12 @@
 body {
 background-color: #000000;
 }
-::-webkit-scrollbar {
-width: 0;
+.example::-webkit-scrollbar {
+  display: none;
+}
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .vid {
 z-index: 0;
