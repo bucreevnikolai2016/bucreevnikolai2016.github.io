@@ -98,7 +98,9 @@ top: 655px;
 
 <script>
 function mouseCoords(e) {
-document.getElementById("myButton3").style.display = '';
+document.getElementById("myButton2").style.display = '';
+document.getElementById("sum").style.display = '';
+document.getElementById("sub").style.display = '';
 }
 </script>	
 	
@@ -126,6 +128,14 @@ document.querySelector('#sub').addEventListener('click', function(){
     }
 });
     </script>	
+	
+<script type="text/javascript">
+setInterval(function() {
+if (!vid.paused) {
+setTimeout(() => { document.getElementById("myButton2").style.display = 'none'; document.getElementById("sum").style.display = 'none'; document.getElementById("sub").style.display = 'none'; }, 2000);
+}
+}, 300);
+</script> 
 
 <div id="podknop" class="podknop"></div>	
 	
@@ -369,11 +379,7 @@ document.getElementById("vid").src = p9;
     </script>    
           
 
-<script type="text/javascript">
-setInterval(function() {
-document.getElementById("myButton3").style.display = 'none';
-}, 5000);
-</script> 
+
 
 
 <button class="myButton2" id="myButton2" type="button"><i class="fa fa-cog" aria-hidden="true"></i></button>   
