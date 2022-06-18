@@ -98,6 +98,16 @@ cursor: pointer;
 z-index: 100;
 width: 70px;
 }
+.podknop {
+z-index: 50;
+position: absolute;
+background-color: #000000;
+opacity: 0.4;
+width: 366px;
+height: 41px;
+left: 1000px;
+top: 655px;
+}
 </style>  
 
 <script>
@@ -145,7 +155,9 @@ document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 }
 }, 3000);
-</script> 	
+</script>
+	
+<div id="podknop" class="podknop"></div>	
 	
 <script type="text/javascript">
 setInterval(function() { 
@@ -218,6 +230,16 @@ var leftslidecontainer = shirok * (1165 / 1366);
 var topslidecontainer = visvid * (665 / 768);
 slidecontainer.style.left = leftslidecontainer + "px";
 slidecontainer.style.top = topslidecontainer + "px";
+	
+var podknop = document.getElementById("podknop");
+var shirpodknop = shirok * (366 / 1366);
+var vispodknop = shirpodknop * (41 / 366);
+var leftpodknop = shirok * (1000 / 1366);
+var toppodknop = visvid * (655 / 768);
+podknop.style.width = shirpodknop + "px";
+podknop.style.height = vispodknop + "px";
+podknop.style.left = leftpodknop + "px";
+podknop.style.top = toppodknop + "px";
 }, 300);
 </script> 
 
