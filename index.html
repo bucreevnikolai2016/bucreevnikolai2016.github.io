@@ -126,10 +126,13 @@ var visyou = shiryou / 1.77777777;
 you.style.left = leftyou + "px";
 you.style.width = shiryou + "px";
 you.style.height = visyou + "px";
+	
 var vid = document.getElementById("vid");
 var visvid = shirok / 1.77777777;
 vid.style.width = shirok + "px";
 vid.style.height = visvid + "px";
+	
+if (shirok >= 1100) {
 var chat = document.getElementById("chat");
 var shirchat = shirok * (366 / 1366);
 var vischat = shirchat * (450 / 366);
@@ -139,6 +142,27 @@ chat.style.width = shirchat + "px";
 chat.style.height = vischat + "px";
 chat.style.left = leftchat + "px";
 chat.style.top = topchat + "px";
+}
+if (shirok < 1100) {
+var leftchat = shirok * (1000 / 1366);
+var topchat = visvid * (205 / 768);
+chat.style.left = leftchat + "px";
+chat.style.top = topchat + "px";
+chat.style.width = "295px";
+chat.style.height = "363px";
+var kof = shirok / 1100;
+var kof2 = "scale(" + kof + ")";
+chat.style.transform = kof2;
+var newsirchat = kof * 295;
+var newvischat = kof * 363;
+var raznsirchat = 295 - newsirchat;
+var raznvischat = 363 - newvischat;
+var smeshchatleft = raznsirchat / 2;
+var smeshchattop = raznvischat / 2;
+chat.style.left = "-" + smeshchatleft;
+chat.style.top = "-" + smeshchattop;
+}
+	
 var podknop = document.getElementById("podknop");
 var shirpodknop = shirok * (366 / 1366);
 var vispodknop = shirpodknop * (41 / 366);
@@ -148,21 +172,25 @@ podknop.style.width = shirpodknop + "px";
 podknop.style.height = vispodknop + "px";
 podknop.style.left = leftpodknop + "px";
 podknop.style.top = toppodknop + "px";
+	
 var myButton2 = document.getElementById("myButton2");
 var leftmyButton2 = shirok * (1327 / 1366);
 var topmyButton2 = visvid * (660 / 768);
 myButton2.style.left = leftmyButton2 + "px";
 myButton2.style.top = topmyButton2 + "px";
+	
 var sum = document.getElementById("sum");
 var leftsum = shirok * (1247 / 1366);
 var topsum = visvid * (660 / 768);
 sum.style.left = leftsum + "px";
 sum.style.top = topsum + "px";
+	
 var sub = document.getElementById("sub");
 var leftsub = shirok * (1287 / 1366);
 var topsub = visvid * (660 / 768);
 sub.style.left = leftsub + "px";
 sub.style.top = topsub + "px";
+	
 var slidecontainer = document.getElementById("slidecontainer");
 var leftslidecontainer = shirok * (1165 / 1366);
 var topslidecontainer = visvid * (665 / 768);
