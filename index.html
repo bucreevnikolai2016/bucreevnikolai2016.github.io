@@ -144,6 +144,7 @@ chat.style.left = leftchat + "px";
 chat.style.top = topchat + "px";
 }
 if (shirok < 1100) {
+var chat = document.getElementById("chat");
 var leftchat = shirok * (1000 / 1366);
 var topchat = visvid * (205 / 768);
 chat.style.left = leftchat + "px";
@@ -159,6 +160,8 @@ var raznsirchat = 295 - newsirchat;
 var raznvischat = 363 - newvischat;
 var smeshchatleft = raznsirchat / 2;
 var smeshchattop = raznvischat / 2;
+chat.style.left = "-" + smeshchatleft;
+chat.style.top = "-" + smeshchattop;
 }
 	
 var podknop = document.getElementById("podknop");
