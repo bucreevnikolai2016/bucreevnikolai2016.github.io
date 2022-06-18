@@ -98,16 +98,6 @@ cursor: pointer;
 z-index: 100;
 width: 70px;
 }
-.podknop {
-z-index: 50;
-position: absolute;
-background-color: #000000;
-opacity: 0.4;
-width: 366px;
-height: 41px;
-left: 1000px;
-top: 655px;
-}
 </style>  
 
 <script>
@@ -155,9 +145,7 @@ document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 }
 }, 3000);
-</script> 
-
-<div id="podknop" class="podknop"></div>	
+</script> 	
 	
 <script type="text/javascript">
 setInterval(function() { 
@@ -206,16 +194,6 @@ var smeshchattop = raznvischat / 2;
 chat.style.left = smeshchatleft + leftchat + "px";
 chat.style.top = smeshchattop + topchat + "px";
 }
-	
-var podknop = document.getElementById("podknop");
-var shirpodknop = shirok * (366 / 1366);
-var vispodknop = shirpodknop * (41 / 366);
-var leftpodknop = shirok * (1000 / 1366);
-var toppodknop = visvid * (655 / 768);
-podknop.style.width = shirpodknop + "px";
-podknop.style.height = vispodknop + "px";
-podknop.style.left = leftpodknop + "px";
-podknop.style.top = toppodknop + "px";
 	
 var myButton2 = document.getElementById("myButton2");
 var leftmyButton2 = shirok * (1327 / 1366);
