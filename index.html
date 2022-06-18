@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="contact form example">
   <title>Оболочка</title>
-</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <style>
 body {
@@ -92,8 +92,10 @@ top: 655px;
 }
 </style>  
 	
-<button class="sum" id="sum" >┏ ┓<br />┗ ┛</button>
-<button class="sub" id="sub" >┛┗<br />┓┏</button>
+</head>
+	
+<button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
+<button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
 <script>
 	document.querySelector('#sum').addEventListener('click', function(){
         if(document.documentElement.webkitRequestFullscreen) {
