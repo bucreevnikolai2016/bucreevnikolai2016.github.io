@@ -95,10 +95,16 @@ left: 1000px;
 top: 655px;
 }
 </style>  
+
+<script>
+function mouseCoords(e) {
+document.getElementById("myButton4").style.display = '';
+}
+</script>	
 	
 </head>
 	
-<body>	
+<body onmousemove="mouseCoords(event)">	
 	
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
