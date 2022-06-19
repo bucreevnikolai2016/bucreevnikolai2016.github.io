@@ -105,9 +105,9 @@ position: absolute;
 background-color: #000000;
 opacity: 0.35;
 width: 366px;
-height: 111px;
+height: 71px;
 left: 1000px;
-top: 655px;
+top: 695px;
 pointer-events:none;
 }
 </style>  
@@ -126,24 +126,23 @@ document.getElementById("sub").style.display = '';
 	
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
+
 <script>
-	document.querySelector('#sum').addEventListener('click', function(){
-        if(document.documentElement.webkitRequestFullscreen) {
-                document.documentElement.webkitRequestFullscreen();
-        }
-        else{
-            document.documentElement.mozRequestFullScreen();
-        }
+document.querySelector('#sum').addEventListener('click', function(){
+if(document.documentElement.webkitRequestFullscreen) {
+document.documentElement.webkitRequestFullscreen();
+} else {
+document.documentElement.mozRequestFullScreen();
+}
 });
 document.querySelector('#sub').addEventListener('click', function(){
-    if(document.documentElement.webkitRequestFullscreen) {
-        document.webkitCancelFullScreen()
-   }
-    else{
-        document.mozCancelFullScreen();
-    }
+if(document.documentElement.webkitRequestFullscreen) {
+document.webkitCancelFullScreen()
+} else {
+document.mozCancelFullScreen();
+}
 });
-    </script>	
+</script>	
 	
 <script type="text/javascript">
 setInterval(function() {
@@ -235,9 +234,9 @@ slidecontainer.style.top = top_slidecontainer + "px";
 	
 var podknop = document.getElementById("podknop");
 var shir_podknop = shir_ok * (366 / 1366);
-var vis_podknop = shir_podknop * (111 / 366);
+var vis_podknop = shir_podknop * (71 / 366);
 var left_podknop = shir_ok * (1000 / 1366);
-var top_podknop = vis_vid * (655 / 768);
+var top_podknop = vis_vid * (695 / 768);
 podknop.style.width = shir_podknop + "px";
 podknop.style.height = vis_podknop + "px";
 podknop.style.left = left_podknop + "px";
