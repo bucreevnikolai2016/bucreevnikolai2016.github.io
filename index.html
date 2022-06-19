@@ -164,84 +164,84 @@ document.getElementById("sub").style.display = '';
 <script type="text/javascript">
 setInterval(function() { 
 var you = document.getElementById("youtube");
-var shirok = window.innerWidth;
-var visok = window.innerHeight
-var leftyou = shirok * (1000 / 1366);
-var shiryou = shirok * (366 / 1366);
-var visyou = shiryou / 1.77777777;
-you.style.left = leftyou + "px";
-you.style.width = shiryou + "px";
-you.style.height = visyou + "px";
+var shir_ok = window.innerWidth;
+var vis_ok = window.innerHeight
+var left_you = shir_ok * (1000 / 1366);
+var shir_you = shir_ok * (366 / 1366);
+var vis_you = shir_you / 1.77777777;
+you.style.left = left_you + "px";
+you.style.width = shir_you + "px";
+you.style.height = vis_you + "px";
 	
 var vid = document.getElementById("vid");
-var visvid = shirok / 1.77777777;
-vid.style.width = shirok + "px";
-vid.style.height = visvid + "px";
+var vis_vid = shir_ok / 1.77777777;
+vid.style.width = shir_ok + "px";
+vid.style.height = vis_vid + "px";
 	
-if (shirok >= 1100) {
+if (shir_ok >= 1100) {
 var chat = document.getElementById("chat");
 chat.style.transform = "scale(1)";
-var shirchat = shirok * (366 / 1366);
-var vischat = shirchat * (490 / 366);
-var leftchat = shirok * (1000 / 1366);
-var topchat = visvid * (205 / 768);
-chat.style.width = shirchat + "px";
-chat.style.height = vischat + "px";
-chat.style.left = leftchat + "px";
-chat.style.top = topchat + "px";
+var shir_chat = shir_ok * (366 / 1366);
+var vis_chat = shir_chat * (490 / 366);
+var left_chat = shir_ok * (1000 / 1366);
+var top_chat = vis_vid * (205 / 768);
+chat.style.width = shir_chat + "px";
+chat.style.height = vis_chat + "px";
+chat.style.left = left_chat + "px";
+chat.style.top = top_chat + "px";
 }
-if (shirok < 1100) {
+if (shir_ok < 1100) {
 var chat = document.getElementById("chat");
-var leftchat = shirok * (1000 / 1366);
-var topchat = visvid * (205 / 768);
+var left_chat = shir_ok * (1000 / 1366);
+var top_chat = vis_vid * (205 / 768);
 chat.style.width = "295px";
 chat.style.height = "395px";
-var kof = shirok / 1100;
+var kof = shir_ok / 1100;
 var kof2 = "scale(" + kof + ")";
 chat.style.transform = kof2;
-var newsirchat = kof * 295;
-var newvischat = kof * 395;
-var raznsirchat = newsirchat - 295;
-var raznvischat = newvischat - 395;
-var smeshchatleft = raznsirchat / 2;
-var smeshchattop = raznvischat / 2;
-chat.style.left = smeshchatleft + leftchat + "px";
-chat.style.top = smeshchattop + topchat + "px";
+var new_sir_chat = kof * 295;
+var new_vis_chat = kof * 395;
+var razn_sir_chat = new_sir_chat - 295;
+var razn_vis_chat = new_vis_chat - 395;
+var smesh_chat_left = razn_sir_chat / 2;
+var smesh_chat_top = razn_vis_chat / 2;
+chat.style.left = smesh_chat_left + left_chat + "px";
+chat.style.top = smesh_chat_top + top_chat + "px";
 }
 	
 var myButton2 = document.getElementById("myButton2");
-var leftmyButton2 = shirok * (1327 / 1366);
-var topmyButton2 = visvid * (660 / 768);
-myButton2.style.left = leftmyButton2 + "px";
-myButton2.style.top = topmyButton2 + "px";
+var left_myButton2 = shir_ok * (1327 / 1366);
+var top_myButton2 = vis_vid * (660 / 768);
+myButton2.style.left = left_myButton2 + "px";
+myButton2.style.top = top_myButton2 + "px";
 	
 var sum = document.getElementById("sum");
-var leftsum = shirok * (1247 / 1366);
-var topsum = visvid * (660 / 768);
-sum.style.left = leftsum + "px";
-sum.style.top = topsum + "px";
+var left_sum = shir_ok * (1247 / 1366);
+var top_sum = vis_vid * (660 / 768);
+sum.style.left = left_sum + "px";
+sum.style.top = top_sum + "px";
 	
 var sub = document.getElementById("sub");
-var leftsub = shirok * (1287 / 1366);
-var topsub = visvid * (660 / 768);
-sub.style.left = leftsub + "px";
-sub.style.top = topsub + "px";
+var left_sub = shir_ok * (1287 / 1366);
+var top_sub = vis_vid * (660 / 768);
+sub.style.left = left_sub + "px";
+sub.style.top = top_sub + "px";
 	
 var slidecontainer = document.getElementById("slidecontainer");
-var leftslidecontainer = shirok * (1165 / 1366);
-var topslidecontainer = visvid * (665 / 768);
-slidecontainer.style.left = leftslidecontainer + "px";
-slidecontainer.style.top = topslidecontainer + "px";
+var left_slidecontainer = shir_ok * (1165 / 1366);
+var top_slidecontainer = vis_vid * (665 / 768);
+slidecontainer.style.left = left_slidecontainer + "px";
+slidecontainer.style.top = top_slidecontainer + "px";
 	
 var podknop = document.getElementById("podknop");
-var shirpodknop = shirok * (366 / 1366);
-var vispodknop = shirpodknop * (111 / 366);
-var leftpodknop = shirok * (1000 / 1366);
-var toppodknop = visvid * (655 / 768);
-podknop.style.width = shirpodknop + "px";
-podknop.style.height = vispodknop + "px";
-podknop.style.left = leftpodknop + "px";
-podknop.style.top = toppodknop + "px";
+var shir_podknop = shir_ok * (366 / 1366);
+var vis_podknop = shir_podknop * (111 / 366);
+var left_podknop = shir_ok * (1000 / 1366);
+var top_podknop = vis_vid * (655 / 768);
+podknop.style.width = shir_podknop + "px";
+podknop.style.height = vis_podknop + "px";
+podknop.style.left = left_podknop + "px";
+podknop.style.top = top_podknop + "px";
 }, 300);
 </script> 
 
