@@ -402,7 +402,8 @@ if (document.getElementById("chat").src != p7) {
 document.getElementById("chat").src = p7;
 }
 if (document.getElementById("vid").src != p9) {
-document.getElementById("vid").src = p9;
+var p9_new = p9.replace(/amp;/g,'');
+document.getElementById("vid").src = p9_new;
 }
 }, 300);
 </script>  
