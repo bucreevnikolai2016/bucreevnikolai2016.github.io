@@ -121,6 +121,17 @@ left: 1000px;
 top: 0px;
 pointer-events:none;
 }
+.text {
+z-index: 100;
+position: absolute;
+left: 0px;
+top: 768px;
+width: 1366px;
+background-color: #000000;
+border: none;
+color: white; 
+font-size: 19px;
+}
 </style>  
 
 <script>
@@ -286,6 +297,8 @@ podyou.style.left = left_podyou + "px";
 podyou.style.top = top_podyou + "px";
 }, 300);
 </script> 
+
+<p class="text">Абзац текста</p>
 
 <input id="ypr" style="display: none" name="ypr" value=""/> 
 
