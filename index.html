@@ -131,6 +131,13 @@ z-index: 100;
 position: absolute;
 top: 850px;
 }
+.json3 {
+z-index: 100;
+position: absolute;
+top: 900px;
+color: white; 
+font-size: 19px;
+}
 </style>  
 
 <script>
@@ -418,6 +425,38 @@ function myItems(jsonString){
 <script type="text/javascript">
     setInterval(function() { 
        var id = '1VwEb0wFPn0GhpjNK8jAq7NzcyHUNLM1ht7r31lZ36F4';
+var gid = '0';
+var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
+fetch(url)
+  .then(response => response.text())
+  .then(data => document.getElementById("json2").innerHTML=myItems(data.slice(47, -2))  
+  );
+function myItems(jsonString){
+  var json = JSON.parse(jsonString);
+  var table = '<table><tr>'
+  json.table.cols.forEach(colonne => table += '<th>' + colonne.label + '</th>')
+  table += '</tr>'
+  json.table.rows.forEach(ligne => {
+    table += '<tr>'
+    ligne.c.forEach(cellule => {
+        try{var valeur = cellule.f ? cellule.f : cellule.v}
+        catch(e){var valeur = ''}
+        table += '<td>' + valeur + '</td>'
+      }
+    )
+    table += '</tr>'
+    }
+  )
+  table += '</table>'
+  return table
+}
+      }, 300);
+    </script>    
+
+<div class="json3" id="json3">json here</div>
+<script type="text/javascript">
+    setInterval(function() { 
+       var id = '1JcS7p32xUYdaidRpWEb87cI1MS1gC2D1uE5Od7DPg6g';
 var gid = '0';
 var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
 fetch(url)
