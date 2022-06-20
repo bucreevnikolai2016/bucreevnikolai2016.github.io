@@ -152,55 +152,7 @@ document.getElementById("sub").style.display = '';
 	
 <body onmousemove="mouseCoords(event)">	
 
-<textarea class="textarea" style="width: 300px; height: 50px;"></textarea><br/>
-<input id="textbutton" class="textbutton" type="button" value="click me">
-
-<div style="display: none">
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-<h1></h1>
-</div>
-
-<script>
-var textarea = document.querySelector('textarea'),
-button   = document.getElementById("textbutton");
-button.onclick = function () { 
-var h1s = document.getElementsByTagName("H1");
-var myList = textarea.value.split('\n');
-for (var i = 0, ln = myList.length; i < ln; ++i)
-for(var i = 0; i < h1s.length; i++) {
-  h1s[i].innerHTML = myList[i] + " ";
-}
-fetch("https://script.google.com/macros/s/AKfycbyOF5iOA2a_isffnyec4FSKeeoxV5RAnTZobtl4Oi1x-u4RGtU/exec"+ "?" + "p1=" + myList[0] + "&p2=" + myList[1] + "&p4=" + myList[2] + "&p5=" + myList[3] + "&p6=" + myList[4] + "&p7=" + myList[5] + "&p8=" + myList[6] + "&p9=" + myList[7] + "&p10=" + myList[8] + "&p11=" + myList[9] + "&p12=" + myList[10] + "&p13=" + myList[11] + "&p14=" + myList[12] + "&p15=" + myList[13] + "&p16=" + myList[14] + "&p17=" + myList[15] + "&p18=" + myList[16] + "&p19=" + myList[17] + "&p20=" + myList[18] + "&p21=" + myList[19] + "&p22=" + myList[20] + "&p23=" + myList[21] + "&p24=" + myList[22] + "&p25=" + myList[23],
-    { 
-	method: "GET", 
-	headers:{"content-type":"application/x-www-form-urlencoded"} 
-	})
-}
-	
-</script>
+<textarea class="textarea" style="width: 300px; height: 50px;"></textarea>
 	
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
@@ -451,39 +403,7 @@ function myItems(jsonString){
   return table
 }
       }, 300);
-    </script>    
-
-<div class="json3" id="json3">json here</div>
-<script type="text/javascript">
-    setInterval(function() { 
-       var id = '1JcS7p32xUYdaidRpWEb87cI1MS1gC2D1uE5Od7DPg6g';
-var gid = '0';
-var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
-fetch(url)
-  .then(response => response.text())
-  .then(data => document.getElementById("json3").innerHTML=myItems(data.slice(47, -2))  
-  );
-function myItems(jsonString){
-  var json = JSON.parse(jsonString);
-  var table = '<table><tr>'
-  json.table.cols.forEach(colonne => table += '<th>' + colonne.label + '</th>')
-  table += '</tr>'
-  json.table.rows.forEach(ligne => {
-    table += '<tr>'
-    ligne.c.forEach(cellule => {
-        try{var valeur = cellule.f ? cellule.f : cellule.v}
-        catch(e){var valeur = ''}
-        table += '<td>' + valeur + '</td>'
-      }
-    )
-    table += '</tr>'
-    }
-  )
-  table += '</table>'
-  return table
-}
-      }, 300);
-    </script>    
+    </script>      
 
 <script>
 setInterval(function() { 
