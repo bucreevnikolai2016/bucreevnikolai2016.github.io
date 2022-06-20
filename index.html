@@ -146,6 +146,56 @@ document.getElementById("sub").style.display = '';
 </head>
 	
 <body onmousemove="mouseCoords(event)">	
+
+<textarea class="textarea" style="width: 300px; height: 150px;"></textarea><br/>
+<input id="textbutton" class="textbutton" type="button" value="click me">
+
+<div style="display: none">
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+</div>
+
+<script>
+var textarea = document.querySelector('textarea'),
+button   = document.getElementById("textbutton");
+button.onclick = function () { 
+var h1s = document.getElementsByTagName("H1");
+var myList = textarea.value.split('\n');
+for (var i = 0, ln = myList.length; i < ln; ++i)
+for(var i = 0; i < h1s.length; i++) {
+  h1s[i].innerHTML = myList[i] + " ";
+}
+fetch("https://script.google.com/macros/s/AKfycbyOF5iOA2a_isffnyec4FSKeeoxV5RAnTZobtl4Oi1x-u4RGtU/exec"+ "?" + "p1=" + myList[0] + "&p2=" + myList[1] + "&p4=" + myList[2] + "&p5=" + myList[3] + "&p6=" + myList[4] + "&p7=" + myList[5] + "&p8=" + myList[6] + "&p9=" + myList[7] + "&p10=" + myList[8] + "&p11=" + myList[9] + "&p12=" + myList[10] + "&p13=" + myList[11] + "&p14=" + myList[12] + "&p15=" + myList[13] + "&p16=" + myList[14] + "&p17=" + myList[15] + "&p18=" + myList[16] + "&p19=" + myList[17] + "&p20=" + myList[18] + "&p21=" + myList[19] + "&p22=" + myList[20] + "&p23=" + myList[21] + "&p24=" + myList[22] + "&p25=" + myList[23],
+    { 
+	method: "GET", 
+	headers:{"content-type":"application/x-www-form-urlencoded"} 
+	})
+}
+	
+</script>
 	
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
@@ -298,8 +348,6 @@ podyou.style.left = left_podyou + "px";
 podyou.style.top = top_podyou + "px";
 }, 300);
 </script> 
-
-<p class="text" id="text">ааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааааа</p>
 
 <input id="ypr" style="display: none" name="ypr" value=""/> 
 
