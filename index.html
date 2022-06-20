@@ -461,7 +461,7 @@ var gid = '0';
 var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
 fetch(url)
   .then(response => response.text())
-  .then(data => document.getElementById("json2").innerHTML=myItems(data.slice(47, -2))  
+  .then(data => document.getElementById("json3").innerHTML=myItems(data.slice(47, -2))  
   );
 function myItems(jsonString){
   var json = JSON.parse(jsonString);
