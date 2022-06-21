@@ -553,12 +553,12 @@ document.getElementById("text").innerHTML = p12;
 
 <script type="text/javascript">
 function handleButtonClick4() {
-document.getElementById('fullyou').value = '1';
 if (document.getElementById('fullsost').value == 0) {
 document.getElementById('fullsost').value = '1';
 } else {
 document.getElementById('fullsost').value = '0';
 }
+document.getElementById('fullyou').value = '1';
 }
 </script>
   
@@ -595,7 +595,7 @@ setInterval(function() {
 var t7 = vid.currentTime;
 var t9 = t7 + 1.5;
 var t8 = document.getElementById('emylast').value;
-var t10 = document.getElementById('fullyou').value;
+var t10 = document.getElementById('fullsost').value;
 if (vid.paused) {
 var t6 = '0';
 } else {
