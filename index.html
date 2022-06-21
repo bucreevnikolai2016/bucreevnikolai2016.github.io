@@ -198,6 +198,14 @@ color: white;
 font-size: 14px; 
 border: none;
 }
+.ytstrima {
+z-index: 103;
+position: absolute;
+width: 550px;
+left: 50px;
+top: 80px;
+font-size: 10px; 
+}
 .ssilkavid {
 z-index: 103;
 position: absolute;
@@ -210,18 +218,34 @@ color: white;
 font-size: 14px; 
 border: none;
 }
+.ytvid {
+z-index: 103;
+position: absolute;
+width: 550px;
+left: 50px;
+top: 160px;
+font-size: 10px; 
+}
 .textarea {
 z-index: 103;
 position: absolute;
 background-color: #000000;
-width: 546px;
+width: 550px;
 height: 155px;
 left: 50px;
 top: 210px;
 color: white; 
-font-size: 17px; 
+font-size: 14px; 
 border: none;
 resize: none;
+}
+.ytarea {
+z-index: 103;
+position: absolute;
+width: 550px;
+left: 50px;
+top: 365px;
+font-size: 10px; 
 }
 .myButton6 {
 z-index: 103;
@@ -289,9 +313,12 @@ document.getElementById("sub").style.display = '';
 <div id="podknop" class="podknop"></div>
 <div id="podyou" class="podyou"></div>	
 <div id="nast" class="nast">
-<input placeholder=" Вставьте чистую ссылку на стрим (без амперсандов & и содержимого за ними)" id="ssilkastrima" class="ssilkastrima" name="ssilkastrima" value=""/>   
-<input placeholder=" Вставьте ссылку на оригинальный mp4 или m8u3 файл" id="ssilkavid" class="ssilkavid" name="ssilkavid" value=""/>  
-<textarea placeholder="Введите описание стрима (учтите, что для сохранения кликабельности ссылок в описании, их количество должно быть не более одной ссылки на один абзац текста)" class="textarea""></textarea>
+<input placeholder="Вставьте ссылку на стрим" id="ssilkastrima" class="ssilkastrima" name="ssilkastrima" value=""/>   
+<p id="ytstrima" class="ytstrima">Это должна быть чистая ссылка без амперсандов(&) и любого содержимого за ними</p>
+<input placeholder=" Вставьте ссылку на оригинальный видеофайл" id="ssilkavid" class="ssilkavid" name="ssilkavid" value=""/>  
+<p id="ytvid" class="ytvid">По этой ссылке видеофайл должен открываться напрямую в стандартном видеоплеере браузера</p>
+<textarea placeholder="Введите описание стрима" class="textarea""></textarea>
+<p id="ytarea" class="ytarea">Для сохранения кликабельности ссылок в описании, их количество должно быть не более одной ссылки на один абзац текста</p>
 <button class="myButton6" id="myButton6" type="button">Добавить</button>  
 </div>	
 <div id="zatem" class="zatem"></div>	
