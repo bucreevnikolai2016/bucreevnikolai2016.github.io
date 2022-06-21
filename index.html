@@ -541,7 +541,11 @@ document.getElementById("text").innerHTML = p12;
 <script type="text/javascript">
 function handleButtonClick4() {
 document.getElementById('fullyou').value = '1';
+if (document.getElementById('fullsost').value == 0) {
 document.getElementById('fullsost').value = '1';
+} else {
+document.getElementById('fullsost').value = '0';
+}
 }
 </script>
   
