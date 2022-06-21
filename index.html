@@ -212,7 +212,8 @@ document.getElementById("sub").style.display = '';
 <div id="podyou" class="podyou"></div>	
 	
 <script type="text/javascript">
-setInterval(function() { 
+setInterval(function() {
+if (document.getElementById('fullsost').value == 0) { 
 var you = document.getElementById("youtube");
 var shir_ok = window.innerWidth;
 var vis_ok = window.innerHeight
@@ -222,6 +223,18 @@ var vis_you = shir_you / 1.77777777;
 you.style.left = left_you + "px";
 you.style.width = shir_you + "px";
 you.style.height = vis_you + "px";
+}
+if (document.getElementById('fullsost').value == 1) {
+var you = document.getElementById("youtube");
+var shir_ok = window.innerWidth;
+var vis_ok = window.innerHeight
+var left_you = shir_ok * (0 / 1366);
+var shir_you = shir_ok * (1366 / 1366);
+var vis_you = shir_you / 1.77777777;
+you.style.left = left_you + "px";
+you.style.width = shir_you + "px";
+you.style.height = vis_you + "px";
+}
 	
 var vid = document.getElementById("vid");
 var vis_vid = shir_ok / 1.77777777;
