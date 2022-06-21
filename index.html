@@ -82,6 +82,19 @@ color: white;
 font-size: 19px;
 cursor: pointer;
 }
+.myButton5 {
+z-index: 90;
+position: absolute;
+left: 130px;
+top: 10px;
+width: 30px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 19px;
+cursor: pointer;
+}
 .sum {
 z-index: 90;
 position: absolute;
@@ -295,6 +308,18 @@ myButton4.style.height = vis_myButton4 + "px";
 myButton4.style.left = left_myButton4 + "px";
 myButton4.style.top = top_myButton4 + "px";
 myButton4.style.fontSize = shrift_myButton4 + "px";
+
+var myButton5 = document.getElementById("myButton5");
+var shir_myButton5 = shir_ok * (30 / 1366);
+var vis_myButton5 = shir_myButton5;
+var shrift_myButton5 = 19 * (shir_ok / 1366);
+var left_myButton5 = shir_ok * (130 / 1366);
+var top_myButton5 = vis_vid * (10 / 768);
+myButton5.style.width = shir_myButton5 + "px";
+myButton5.style.height = vis_myButton5 + "px";
+myButton5.style.left = left_myButton5 + "px";
+myButton5.style.top = top_myButton5 + "px";
+myButton5.style.fontSize = shrift_myButton5 + "px";
 	
 var sum = document.getElementById("sum");
 var shir_sum = shir_ok * (30 / 1366);
@@ -529,6 +554,7 @@ document.getElementById("text").innerHTML = p12;
 <button class="myButton2" id="myButton2" type="button"><i class="fa fa-lock" aria-hidden="true"></i></button>   
 <button class="myButton3" id="myButton3" style="display: none" type="button">Пользователь мод (ПП)</button> 
 <button class="myButton4" id="myButton4" type="button"><i class="fa fa-exchange" aria-hidden="true"></i></button>  
+<button class="myButton5" id="myButton5" type="button"><i class="fa fa-cog" aria-hidden="true"></i></button>  
        
 <input id="otpravka" style="display: none" name="otpravka" value=""/>   
 <input id="emylast" style="display: none" name="emylast" value=""/>  
