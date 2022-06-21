@@ -213,7 +213,7 @@ document.getElementById("sub").style.display = '';
 	
 <script type="text/javascript">
 setInterval(function() {
-if (document.getElementById('fullsost').value == 0) { 
+if (document.getElementById('fullsost').value == 0) { // document.getElementById('tablsost').value == 0
 var you = document.getElementById("youtube");
 var shir_ok = window.innerWidth;
 var vis_ok = window.innerHeight
@@ -224,7 +224,7 @@ you.style.left = left_you + "px";
 you.style.width = shir_you + "px";
 you.style.height = vis_you + "px";
 }
-if (document.getElementById('fullsost').value == 1) {
+if (document.getElementById('fullsost').value == 1) { // document.getElementById('tablsost').value == 1
 var you = document.getElementById("youtube");
 var shir_ok = window.innerWidth;
 var vis_ok = window.innerHeight
@@ -538,6 +538,7 @@ document.getElementById("text").innerHTML = p12;
 <input id="sinh" style="display: none" name="sinh" value="0"/> 
 <input id="fullyou" style="display: none" name="fullyou" value="0"/> 
 <input id="fullsost" style="display: none" name="fullsost" value="0"/> 
+<input id="tablsost" style="display: none" name="tablsost" value="0"/> 
  
 <script type="text/javascript">    
   window.onload = init;
@@ -561,6 +562,21 @@ document.getElementById('fullsost').value = '0';
 document.getElementById('fullyou').value = '1';
 }
 </script>
+
+<script type="text/javascript">
+setInterval(function() { 
+  var p1 = json2.firstElementChild;
+  var p2 = p1.firstElementChild;
+  var p3 = p2.lastElementChild;
+  var p4 = p3.lastElementChild;
+  var p5 = p4.innerHTML;
+  var p6 = p4.previousElementSibling;
+  var p9 = p6.innerHTML;
+  var p7 = p6.previousElementSibling;
+  var p8 = p7.innerHTML;
+  document.getElementById('tablsost').value = p8;
+}, 300);
+</script> 
   
 <script type="text/javascript">
 setInterval(function() { 
