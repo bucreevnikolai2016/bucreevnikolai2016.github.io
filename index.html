@@ -523,6 +523,7 @@ document.getElementById("text").innerHTML = p12;
 <input id="per" style="display: none" name="per" value="0"/> 
 <input id="pertime" style="display: none" name="pertime" value="0"/> 
 <input id="sinh" style="display: none" name="sinh" value="0"/> 
+<input id="fullyou" style="display: none" name="fullyou" value="0"/> 
  
 <script type="text/javascript">    
   window.onload = init;
@@ -535,6 +536,12 @@ document.getElementById("text").innerHTML = p12;
   button4.onclick = handleButtonClick4;
   }
     </script>
+
+<script type="text/javascript">
+function handleButtonClick4() {
+document.getElementById('fullyou').value = '1';
+}
+</script>
   
 <script type="text/javascript">
 setInterval(function() { 
@@ -569,6 +576,7 @@ setInterval(function() {
 var t7 = vid.currentTime;
 var t9 = t7 + 1.5;
 var t8 = document.getElementById('emylast').value;
+var t10 = document.getElementById('fullyou').value;
 if (vid.paused) {
 var t6 = '0';
 } else {
@@ -580,17 +588,17 @@ document.getElementById('otpravka').value = '0';
 } else {
 }
 } 
-if (t8 != t6 || document.getElementById('per').value == 1 || document.getElementById('sinh').value == 1) {
+if (t8 != t6 || document.getElementById('per').value == 1 || document.getElementById('sinh').value == 1 || document.getElementById('fullyou').value == 1) {
 if (document.getElementById('otpravka').value == 1) {
 } else {
 if (document.getElementById('timeotp').value == 0) {
-fetch("https://script.google.com/macros/s/AKfycbxS3GtSmJCW3XAK1Peim3AVC2_7N5tFjMzJv5ggxfzgsbmhJGXVPsqIJD1-0w3PtOhC3A/exec"+ "?" + "p1=" + t7 + "&p2=" + t6,
+fetch("https://script.google.com/macros/s/AKfycbxS3GtSmJCW3XAK1Peim3AVC2_7N5tFjMzJv5ggxfzgsbmhJGXVPsqIJD1-0w3PtOhC3A/exec"+ "?" + "p1=" + t7 + "&p2=" + t6 + "&p4=" + t10,
     { 
 	method: "GET", 
 	headers:{"content-type":"application/x-www-form-urlencoded"} 
 	})
 } else {
-setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbxS3GtSmJCW3XAK1Peim3AVC2_7N5tFjMzJv5ggxfzgsbmhJGXVPsqIJD1-0w3PtOhC3A/exec"+ "?" + "p1=" + t9 + "&p2=" + t6, { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) }, 1500);
+setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbxS3GtSmJCW3XAK1Peim3AVC2_7N5tFjMzJv5ggxfzgsbmhJGXVPsqIJD1-0w3PtOhC3A/exec"+ "?" + "p1=" + t9 + "&p2=" + t6 + "&p4=" + t10, { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) }, 1500);
 }
 document.getElementById('otpravka').value = '1';
 document.getElementById('emylast').value = t6;
@@ -598,6 +606,7 @@ document.getElementById('timeotp').value = '1';
 document.getElementById('pertime').value = '1';
 document.getElementById('per').value = '0';
 document.getElementById('sinh').value = '0';
+document.getElementById('fullyou').value = '0';
 setTimeout(() => { document.getElementById('pertime').value = '0'; }, 50);
 setTimeout(() => { document.getElementById('timeotp').value = '0'; }, 1500);
 }
