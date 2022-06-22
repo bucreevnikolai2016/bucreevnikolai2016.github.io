@@ -771,6 +771,9 @@ document.getElementById("text").innerHTML = p12;
 <input id="fullyou" style="display: none" name="fullyou" value="0"/> 
 <input id="fullsost" style="display: none" name="fullsost" value="0"/> 
 <input id="tablsost" style="display: none" name="tablsost" value="0"/> 
+<input id="saveyou" style="display: none" name="saveyou" value=""/>   
+<input id="savevid" style="display: none" name="savevid" value=""/>   
+<input id="savetext" style="display: none" name="savetext" value=""/>   
  
 <script type="text/javascript">    
   window.onload = init;
@@ -803,6 +806,9 @@ fetch("https://script.google.com/macros/s/AKfycbzYIZhIXTLrrU7TrB-JbwnnMvFyrNgR0X
 	method: "GET", 
 	headers:{"content-type":"application/x-www-form-urlencoded"} 
 	})
+document.getElementById("saveyou").value = ssilkayoutube;
+document.getElementById("savevid").value = ssilkavideo;
+document.getElementById("savetext").value = str;
 }
 </script>
 
