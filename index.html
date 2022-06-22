@@ -792,6 +792,17 @@ document.getElementById("text").innerHTML = p12;
 function handleButtonClick6() {
 document.getElementById("nast").style.display = 'none';
 document.getElementById("zatem").style.display = 'none';
+var ssilkayoutube = document.getElementById('ssilkastrima').value;
+var ssilkavideo = document.getElementById('ssilkavid').value;
+var mass_text = [];
+var mass = document.getElementById("textarea").value.split('\n');
+mass.forEach(element => mass_text.push(element.replace(element.match(/http[^ ]+/g), '<a href="' + element.match(/http[^ ]+/g) + '" target="_blank">' + element.match(/http[^ ]+/g) + '</a>')));
+var str = mass_text.join(' </br> ');
+fetch("https://script.google.com/macros/s/AKfycbzYIZhIXTLrrU7TrB-JbwnnMvFyrNgR0Xt9okW25gk55umwDPqpiPxd4x07hlfDb8yQPA/exec"+ "?" + "p1=" + ssilkavideo + "&p2=" + ssilkayoutube + "&p4=" + str,
+    { 
+	method: "GET", 
+	headers:{"content-type":"application/x-www-form-urlencoded"} 
+	})
 }
 </script>
 
