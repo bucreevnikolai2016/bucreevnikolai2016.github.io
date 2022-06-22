@@ -63,6 +63,18 @@ color: white;
 font-size: 19px;
 cursor: pointer;
 }
+.myButton10 {
+z-index: 91;
+position: absolute;
+left: 90px;
+top: 10px;
+width: 30px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 19px;
+}
 .myButton3 {
 z-index: 100;
 position: absolute;
@@ -404,6 +416,18 @@ myButton2.style.height = vis_myButton2 + "px";
 myButton2.style.left = left_myButton2 + "px";
 myButton2.style.top = top_myButton2 + "px";
 myButton2.style.fontSize = shrift_myButton2 + "px";
+
+var myButton10 = document.getElementById("myButton10");
+var shir_myButton10 = shir_ok * (30 / 1366);
+var vis_myButton10 = shir_myButton10;
+var shrift_myButton10 = 19 * (shir_ok / 1366);
+var left_myButton10 = shir_ok * (90 / 1366);
+var top_myButton10 = vis_vid * (10 / 768);
+myButton10.style.width = shir_myButton10 + "px";
+myButton10.style.height = vis_myButton10 + "px";
+myButton10.style.left = left_myButton10 + "px";
+myButton10.style.top = top_myButton10 + "px";
+myButton10.style.fontSize = shrift_myButton10 + "px";
 
 var myButton4 = document.getElementById("myButton4");
 var shir_myButton4 = shir_ok * (30 / 1366);
@@ -784,6 +808,7 @@ setTimeout(() => { document.getElementById("saveyou").value = document.getElemen
 <button class="myButton3" id="myButton3" style="display: none" type="button">Пользователь мод (ПП)</button> 
 <button class="myButton4" id="myButton4" type="button"><i class="fa fa-exchange" aria-hidden="true"></i></button>  
 <button class="myButton5" id="myButton5" type="button"><i class="fa fa-cog" aria-hidden="true"></i></button>  
+<button class="myButton10" id="myButton10" type="button"><i class="fa fa-unlock" aria-hidden="true"></i></button>
        
 <input id="otpravka" style="display: none" name="otpravka" value=""/>   
 <input id="emylast" style="display: none" name="emylast" value=""/>  
