@@ -804,7 +804,7 @@ var ssilkavideo = document.getElementById('ssilkavid').value;
 var mass_text = [];
 var mass = document.getElementById("textarea").value.split('\n');
 mass.forEach(element => mass_text.push(element.replace(element.match(/http[^ ]+/g), '<a href="' + element.match(/http[^ ]+/g) + '" target="_blank">' + element.match(/http[^ ]+/g) + '</a>')));
-var str = mass_text.join(' </br> ');
+var str = mass_text.join('</br>');
 if (ssilkayoutube != 0) {
 document.getElementById("saveyou").value = ssilkayoutube;
 }
