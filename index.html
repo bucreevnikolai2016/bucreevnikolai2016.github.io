@@ -353,6 +353,9 @@ font-family: 'Arial';
 <script>
 function mouseCoords(e) {
 document.getElementById("myButton2").style.display = '';
+document.getElementById("myButton4").style.display = '';
+document.getElementById("myButton5").style.display = '';
+document.getElementById("myButton10").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 }
@@ -388,10 +391,16 @@ document.mozCancelFullScreen();
 setInterval(function() {
 if (!vid.paused) {
 document.getElementById("myButton2").style.display = 'none'; 
+document.getElementById("myButton4").style.display = 'none'; 
+document.getElementById("myButton5").style.display = 'none'; 
+document.getElementById("myButton10").style.display = 'none'; 
 document.getElementById("sum").style.display = 'none'; 
 document.getElementById("sub").style.display = 'none';
 } else {
 document.getElementById("myButton2").style.display = '';
+document.getElementById("myButton4").style.display = '';
+document.getElementById("myButton5").style.display = '';
+document.getElementById("myButton10").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 }
