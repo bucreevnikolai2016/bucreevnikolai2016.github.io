@@ -329,6 +329,8 @@ font-family: 'Arial';
 .staticrypt-remember {
 z-index: 103;
 position: absolute;
+width: 13px;
+height: 13px;
 left: 23px;
 top: 57px;
 }
@@ -744,8 +746,12 @@ zap.style.top = top_zap + "px";
 zap.style.fontSize = shrift_zap + "px";
 
 var staticrypt_remember = document.getElementById("staticrypt-remember");
+var shir_staticrypt_remember = shir_ok * (13 / 1366);
+var vis_staticrypt_remember = shir_staticrypt_remember * (13 / 13);
 var left_staticrypt_remember = shir_ok * (23 / 1366);
 var top_staticrypt_remember = vis_vid * (57 / 768);
+staticrypt_remember.style.width = shir_staticrypt_remember + "px";
+staticrypt_remember.style.height = vis_staticrypt_remember + "px";
 staticrypt_remember.style.left = left_staticrypt_remember + "px";
 staticrypt_remember.style.top = top_staticrypt_remember + "px";
 
