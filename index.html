@@ -409,7 +409,7 @@ document.getElementById("sub").style.display = '';
 </div>	
 <div id="zatem" class="zatem"></div>	
 
-<div class="par">
+<div class="par" id="par">
 <div class="staticrypt-page">
     <div class="staticrypt-form">
         <div class="staticrypt-instructions">
@@ -432,7 +432,7 @@ document.getElementById("sub").style.display = '';
                        name="remember"/>
             </label>
 
-            <input type="submit" class="staticrypt-decrypt-button" value="Разблокировать"/>
+            <input type="submit" class="staticrypt-decrypt-button" id="staticrypt-decrypt-button" value="Разблокировать"/>
         </form>
     </div>
 
@@ -712,6 +712,56 @@ ytarea.style.width = shir_ytarea + "px";
 ytarea.style.left = left_ytarea + "px";
 ytarea.style.top = top_ytarea + "px";
 ytarea.style.fontSize = shrift_ytarea + "px";
+
+var par = document.getElementById("par");
+var shir_par = shir_ok * (200 / 1366);
+var vis_par = shir_par * (150 / 200);
+var left_par = shir_ok * (583 / 1366);
+var top_par = vis_vid * (309 / 768);
+par.style.width = shir_par + "px";
+par.style.height = vis_par + "px";
+par.style.left = left_par + "px";
+par.style.top = top_par + "px";
+
+var staticrypt-password = document.getElementById("staticrypt-password");
+var shir_staticrypt-password = shir_ok * (150 / 1366);
+var vis_staticrypt-password = shir_staticrypt-password * (30 / 150);
+var left_staticrypt-password = shir_ok * (25 / 1366);
+var top_staticrypt-password = vis_vid * (23 / 768);
+var shrift_staticrypt-password = 14 * (shir_ok / 1366);
+staticrypt-password.style.width = shir_staticrypt-password + "px";
+staticrypt-password.style.height = vis_staticrypt-password + "px";
+staticrypt-password.style.left = left_staticrypt-password + "px";
+staticrypt-password.style.top = top_staticrypt-password + "px";
+staticrypt-password.style.fontSize = shrift_staticrypt-password + "px";
+
+var zap = document.getElementById("zap");
+var shir_zap = shir_ok * (150 / 1366);
+var left_zap = shir_ok * (43 / 1366);
+var top_zap = vis_vid * (48 / 768);
+var shrift_zap = 12 * (shir_ok / 1366);
+zap.style.width = shir_zap + "px";
+zap.style.left = left_zap + "px";
+zap.style.top = top_zap + "px";
+zap.style.fontSize = shrift_zap + "px";
+
+var staticrypt-remember = document.getElementById("staticrypt-remember");
+var left_staticrypt-remember = shir_ok * (10 / 1366);
+var top_staticrypt-remember = vis_vid * (29 / 768);
+staticrypt-remember.style.left = left_staticrypt-remember + "px";
+staticrypt-remember.style.top = top_staticrypt-remember + "px";
+
+var staticrypt-decrypt-button = document.getElementById("staticrypt-decrypt-button");
+var shir_staticrypt-decrypt-button = shir_ok * (120 / 1366);
+var vis_staticrypt-decrypt-button = shir_staticrypt-decrypt-button * (30 / 120);
+var left_staticrypt-decrypt-button = shir_ok * (40 / 1366);
+var top_staticrypt-decrypt-button = vis_vid * (93 / 768);
+var shrift_staticrypt-decrypt-button = 14 * (shir_ok / 1366);
+staticrypt-decrypt-button.style.width = shir_staticrypt-decrypt-button + "px";
+staticrypt-decrypt-button.style.height = vis_staticrypt-decrypt-button + "px";
+staticrypt-decrypt-button.style.left = left_staticrypt-decrypt-button + "px";
+staticrypt-decrypt-button.style.top = top_staticrypt-decrypt-button + "px";
+staticrypt-decrypt-button.style.fontSize = shrift_staticrypt-decrypt-button + "px";
 }, 300);
 </script> 
 
