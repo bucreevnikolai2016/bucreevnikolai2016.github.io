@@ -371,7 +371,7 @@ document.getElementById("sub").style.display = '';
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
 
-<script>
+<script> // скрипт фулкрина
 document.querySelector('#sum').addEventListener('click', function(){
 if(document.documentElement.webkitRequestFullscreen) {
 document.documentElement.webkitRequestFullscreen();
@@ -388,7 +388,7 @@ document.mozCancelFullScreen();
 });
 </script>	
 	
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт исчезновения кнопок при проигрывании видео
 setInterval(function() {
 if (!vid.paused) {
 document.getElementById("myButton2").style.display = 'none'; 
@@ -453,7 +453,7 @@ document.getElementById("sub").style.display = '';
     <p class="pull-right">Created with <a href="https://robinmoisson.github.io/staticrypt">StatiCrypt</a></p>
 </footer>
 	
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт масштабирования
 setInterval(function() {
 if (document.getElementById('fullsost').value == 0) { // document.getElementById('tablsost').value != 1
 var you = document.getElementById("youtube");
@@ -794,7 +794,7 @@ staticrypt_decrypt_button.style.fontSize = shrift_staticrypt_decrypt_button + "p
   <p id="pp" style="display: none">Volume: <span id="demo" style="display: none"></span></p>
 </div>
 	
-<script>
+<script> // скрипт обепечивающий работу ползунка
 var slider = document.getElementById("myRange");
 var output = document.getElementById("demo");
 output.innerHTML = slider.value;
@@ -803,7 +803,7 @@ output.innerHTML = this.value;
 }
 </script>	
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт управляющий громкостью видео
 setInterval(function() {
 if (document.getElementById('vid').controls == false) {
 var input = document.getElementById("demo");
@@ -815,7 +815,7 @@ vid.volume = v1;
 </script> 	
  
 <div style="display: none" class="json" id="json">json here</div>
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт подгружающий таблицу ссылок
     setInterval(function() { 
        var id = '1d5z8fcfH7mQxtlwu7Aof73LaedRrEBPnAo4eJTuBgBM';
 var gid = '0';
@@ -847,7 +847,7 @@ function myItems(jsonString){
     </script> 
    
 <div style="display: none" class="json2" id="json2">json here</div>
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт подгружающий данные управления
     setInterval(function() { 
        var id = '1VwEb0wFPn0GhpjNK8jAq7NzcyHUNLM1ht7r31lZ36F4';
 var gid = '0';
@@ -878,7 +878,7 @@ function myItems(jsonString){
       }, 300);
     </script>      
 
-<script>
+<script> // скрипт добавляющий контент
 setInterval(function() { 
 var p1 = json.firstElementChild;
 var p2 = p1.firstElementChild;
@@ -911,7 +911,7 @@ document.getElementById("text").innerHTML = p12;
 }, 300);
 </script>  
 
-<script>
+<script> // скрипт ограничивающий количетво символов в описании
 setInterval(function() { 
 var mass_text = [];
 var mass = document.getElementById("textarea").value.split('\n');
@@ -927,11 +927,11 @@ document.getElementById('textarea').value = '';
 }, 300);
 </script>
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт обеспечивающий возможность отправки пустых строк со старта
 setTimeout(() => { document.getElementById("saveyou").value = document.getElementById("youtube").src; document.getElementById("savevid").value = document.getElementById("vid").src; document.getElementById("savetext").value = document.getElementById("text").innerHTML; }, 5000);
 </script>  
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт управления состоянием видео
   function handleButtonClick3() {
   setInterval(function() {
   var p1 = json2.firstElementChild;
@@ -986,7 +986,7 @@ setTimeout(() => { document.getElementById("saveyou").value = document.getElemen
 <input id="savevid" style="display: none" name="savevid" value=""/>   
 <input id="savetext" style="display: none" name="savetext" value=""/>   
  
-<script type="text/javascript">    
+<script type="text/javascript">    // скрипт дающий функции кнопкам
   window.onload = init;
   function init(){
   var button2 = document.getElementById("myButton2")
@@ -1002,14 +1002,14 @@ setTimeout(() => { document.getElementById("saveyou").value = document.getElemen
   }
     </script>
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт отвечающий за появление панели пароля
 function handleButtonClick2() {
 document.getElementById("par").style.display = 'block';
 document.getElementById("zatem").style.display = 'block';
 }
 </script>
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт отправки ссылок и описания 
 function handleButtonClick6() {
 document.getElementById("nast").style.display = 'none';
 document.getElementById("zatem").style.display = 'none';
@@ -1044,14 +1044,14 @@ document.getElementById("textarea").value = '';
 }
 </script>
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт отвечающий за появление панели настройки
 function handleButtonClick5() {
 document.getElementById("nast").style.display = 'block';
 document.getElementById("zatem").style.display = 'block';
 }
 </script>
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт отвечающий за фулкрин ютуба
 function handleButtonClick4() {
 if (document.getElementById('fullsost').value == 0) {
 document.getElementById('fullsost').value = '1';
@@ -1064,7 +1064,7 @@ document.getElementById('fullyou').value = '1';
 }
 </script>
 
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт управляющий фулскрином ютуба у пользователя
 setInterval(function() { 
   var p1 = json2.firstElementChild;
   var p2 = p1.firstElementChild;
@@ -1077,7 +1077,7 @@ setInterval(function() {
 }, 300);
 </script> 
   
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт отслеживающий перемотку
 setInterval(function() { 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -1095,13 +1095,13 @@ delayedGreeting();
 }, 50);
 </script> 
 	
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт обеспечивающий отправку данных кажлдые 30 сек для синхронизации
 setInterval(function() {
 document.getElementById('sinh').value = '1';
 }, 30000);
 </script>  
 	
-<script type="text/javascript">
+<script type="text/javascript"> // скрипт отправки данных управления
 function handleButtonClick2() {
 setTimeout(() => { fetch("https://script.google.com/macros/s/AKfycbxS3GtSmJCW3XAK1Peim3AVC2_7N5tFjMzJv5ggxfzgsbmhJGXVPsqIJD1-0w3PtOhC3A/exec"+ "?" + "p3=1", { method: "GET", headers:{"content-type":"application/x-www-form-urlencoded"} }) }, 1500);
 document.getElementById('myRange').style.display = 'none';
