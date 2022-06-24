@@ -12,7 +12,6 @@
 <title>Оболочка</title>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
 
 <style>
 body {
@@ -288,19 +287,6 @@ document.getElementById("myRange").style.display = '';
 <video class="vid" id="vid">
   <source src="" />
 </video>   
-
-<video id='hls-example'  class="video-js vjs-default-skin" width="400" height="300" controls>
-<source type="application/x-mpegURL" src="http://109.239.128.126:8080/kinouzhas/tracks-v2a1/mono.m3u8">
-</video>
-
-<script>
-var player = videojs('hls-example');
-player.play();
-</script>
-
-<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
 
 <script>
 document.querySelector('#sum').addEventListener('click', function(){
