@@ -303,6 +303,7 @@ document.mozCancelFullScreen();
 
 <script type="text/javascript">
 setInterval(function() {
+if (document.getElementById("myButton2")) {
 if (!vid.paused) {
 document.getElementById("myButton2").style.display = 'none'; 
 document.getElementById("sum").style.display = 'none'; 
@@ -314,22 +315,8 @@ document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 document.getElementById("myRange").style.display = '';
 }
-}, 3000);
-</script>
-
-<script type="text/javascript">
-  window.onload = init;
-  function init() {
-  var button2 = document.getElementById("myButton2");
-  button2.onclick = handleButtonClick2;
-  }
-    </script> 
-
-<script type="text/javascript">
-function handleButtonClick2() {
-document.getElementById("par").style.display = 'block';
-document.getElementById("zatem").style.display = 'block';
 }
+}, 3000);
 </script>
 
 <script type="text/javascript">
@@ -350,12 +337,14 @@ output.innerHTML = this.value;
 
 <script type="text/javascript">
 setInterval(function() {
+if (document.getElementById("demo")) {
 if (document.getElementById('vid').controls == false) {
 var input = document.getElementById("demo");
 var text = input.innerHTML;
 var v1 = text / 100;
 vid.volume = v1; 
 } 
+}
 }, 300);
 </script> 
 
@@ -392,6 +381,7 @@ function myItems(jsonString){
 
 <script type="text/javascript">
     setInterval(function() { 
+if (document.getElementById("json2")) {
        var id = '1VwEb0wFPn0GhpjNK8jAq7NzcyHUNLM1ht7r31lZ36F4';
 var gid = '0';
 var url = 'https://docs.google.com/spreadsheets/d/'+id+'/gviz/tq?tqx=out:json&tq&gid='+gid;
@@ -417,6 +407,7 @@ function myItems(jsonString){
   )
   table += '</table>'
   return table
+}
 }
       }, 300);
     </script>    
@@ -456,6 +447,7 @@ document.getElementById("text").innerHTML = p12;
 
 <script type="text/javascript">
 setInterval(function() { 
+if (document.getElementById("json2")) {
   var p1 = json2.firstElementChild;
   var p2 = p1.firstElementChild;
   var p3 = p2.lastElementChild;
@@ -464,11 +456,13 @@ setInterval(function() {
   var p7 = p6.previousElementSibling;
   var p8 = p7.innerHTML;
   document.getElementById('tablsost').value = p8;
+}
 }, 300);
 </script> 
 
 <script type="text/javascript">
   setInterval(function() {
+if (document.getElementById("json2")) {
   var p1 = json2.firstElementChild;
   var p2 = p1.firstElementChild;
   var p3 = p2.lastElementChild;
@@ -494,11 +488,13 @@ setInterval(function() {
   document.getElementById('ypr').value = p9;
   }
   }
+}
           }, 10);
     </script> 
 
 <script type="text/javascript">
 setInterval(function() {
+if (document.getElementById("myButton2")) {
 if (document.getElementById('tablsost').value != 1) {
 var you = document.getElementById("youtube");
 var shir_ok = window.innerWidth;
@@ -696,6 +692,7 @@ staticrypt_decrypt_button.style.height = vis_staticrypt_decrypt_button + "px";
 staticrypt_decrypt_button.style.left = left_staticrypt_decrypt_button + "px";
 staticrypt_decrypt_button.style.top = top_staticrypt_decrypt_button + "px";
 staticrypt_decrypt_button.style.fontSize = shrift_staticrypt_decrypt_button + "px";
+}
 }, 2000);
 </script>
 
