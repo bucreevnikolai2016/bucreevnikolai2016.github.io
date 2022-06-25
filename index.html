@@ -12,10 +12,7 @@
 <title>Оболочка</title>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
-<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
 
 <style>
 body {
@@ -218,7 +215,7 @@ border: none;
 cursor: pointer;
 font-family: 'Arial';
 }
-.video-js {
+#video {
 z-index: 150;
 position: absolute;
 }
@@ -237,11 +234,18 @@ document.getElementById("myRange").style.display = '';
 	
 <body onmousemove="mouseCoords(event)" class="staticrypt-body">
 	
-<video id='hls-example'  class="video-js vjs-default-skin" width="400" height="300" controls>
-<source type="application/x-mpegURL" src="http://livetv.mylifeisgood.ml:8880/mfolive.m3u8?media=rentv">
-</video>
+<video id="video"></video>
 <script>
-var player = videojs('hls-example');
+  var video = document.getElementById('video');
+  var videoSrc = 'https://sc.id-tv.kz:443/DomKino_36_37.m3u8';
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+  }
+  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = videoSrc;
+  }
 </script>
 
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
