@@ -236,7 +236,7 @@ document.getElementById("myRange").style.display = '';
 <body onmousemove="mouseCoords(event)" class="staticrypt-body">
 		
 <video id="my-player" class="video-js" preload="auto" poster="//vjs.zencdn.net/v/oceans.png" data-setup='{"controls": true}'>
-  <source src="https://live-1-201.zxz.su/stream/1054/HLS/SD/v1DzDmEd9FRqucYBWsigtw/1656163320/S-NEJueURaajA4MzFPblhSTVJOZjZqMW8vd1drYmc2WXpTekpra2dldmJVUkVwR3B0VU1CZHVvWWs5a0VaRFlYVTZUWUw0eFBXcjYweFdZWWd3TkNuZ2c9PQ==/move/four/dirs/upper/1054-576p.m3u8"></source>
+  <source src="https://okkotv-live.cdnvideo.ru/channel/TNT_OTT_HD.m3u8"></source>
 </video>
 <script>
 var player = videojs('my-player', {
@@ -244,7 +244,7 @@ var player = videojs('my-player', {
 });
 </script>
 <script>
-setTimeout(() => { player.play(); }, 10000);
+player.play();
 </script>
 
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
