@@ -228,6 +228,7 @@ document.getElementById("myButton2").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 document.getElementById("myRange").style.display = '';
+document.getElementById('my-player_html5_api').muted = false;
 }
 </script>	
 	
@@ -496,7 +497,6 @@ if (document.getElementById("json2")) {
   if (p10 != p5 || p9 != p11) {
   if (p5 == 0) {
   player.play();
-  player.muted = false;
   vid.pause();
   vid.currentTime = p9;
   document.getElementById('ypr').value = p9;
