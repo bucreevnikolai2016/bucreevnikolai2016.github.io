@@ -220,6 +220,14 @@ font-family: 'Arial';
 z-index: 150;
 position: absolute;
 }
+.twitch {
+z-index: 160;
+position: absolute;
+}
+.twitchchat {
+z-index: 165;
+position: absolute;
+}
 </style>  
 
 <script>
@@ -234,7 +242,16 @@ document.getElementById("myRange").style.display = '';
 </head>
 	
 <body onmousemove="mouseCoords(event)" class="staticrypt-body">
-		
+	
+<iframe class="twitch" src="https://player.twitch.tv/?channel=evaanna&parent=bucreevnikolai2016.github.io" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
+<iframe
+  class="twitchchat"
+  id="chat_embed"
+  src="https://www.twitch.tv/embed/evaanna/chat?parent=bucreevnikolai2016.github.io"
+  height="500"
+  width="350">
+</iframe>
+
 <video width="366" height="168" id="my-player" class="video-js" preload="auto" poster="//vjs.zencdn.net/v/oceans.png" controls>
   <source src="https://okkotv-live.cdnvideo.ru/channel/TNT_OTT_HD.m3u8"></source>
 </video>
