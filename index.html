@@ -228,7 +228,6 @@ document.getElementById("myButton2").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 document.getElementById("myRange").style.display = '';
-document.getElementById('my-player_html5_api').muted = false;
 }
 </script>	
 	
@@ -303,7 +302,7 @@ var player = videojs('my-player', {
 
 <script>
 document.querySelector('#sum').addEventListener('click', function(){
-player.play();
+document.getElementById('my-player_html5_api').muted = false;
 if(document.documentElement.webkitRequestFullscreen) {
 document.documentElement.webkitRequestFullscreen();
 } else {
