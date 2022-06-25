@@ -302,7 +302,6 @@ var player = videojs('my-player', {
 
 <script>
 document.querySelector('#sum').addEventListener('click', function(){
-document.getElementById('my-player_html5_api').muted = false;
 if(document.documentElement.webkitRequestFullscreen) {
 document.documentElement.webkitRequestFullscreen();
 } else {
@@ -320,6 +319,9 @@ document.mozCancelFullScreen();
 
 <script type="text/javascript">
 setInterval(function() {
+if (document.getElementById('my-player_html5_api')) {
+document.getElementById('my-player_html5_api').muted = false;
+}
 if (document.getElementById("myButton2")) {
 if (!vid.paused) {
 document.getElementById("myButton2").style.display = 'none'; 
