@@ -242,7 +242,7 @@ document.getElementById("myRange").style.display = '';
 var player = videojs('my-player', {
   controlBar: false
 });
-player.play();
+setTimeout(() => { player.play(); }, 5000);
 </script>
 
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
