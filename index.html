@@ -12,6 +12,8 @@
 <title>Оболочка</title>
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
 
 <style>
 body {
@@ -214,7 +216,7 @@ border: none;
 cursor: pointer;
 font-family: 'Arial';
 }
-.video-js vjs-default-skin {
+.video-js {
 z-index: 150;
 position: absolute;
 }
@@ -232,6 +234,25 @@ document.getElementById("myRange").style.display = '';
 </head>
 	
 <body onmousemove="mouseCoords(event)" class="staticrypt-body">
+	
+<video
+    id="my-player"
+    class="video-js"
+    controls
+    preload="auto"
+    poster="//vjs.zencdn.net/v/oceans.png">
+  <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source>
+  <p class="vjs-no-js">
+    To view this video please enable JavaScript, and consider upgrading to a
+    web browser that
+    <a href="https://videojs.com/html5-video-support/" target="_blank">
+      supports HTML5 video
+    </a>
+  </p>
+</video>
+<script>
+var player = videojs('my-player');
+</script>
 
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
