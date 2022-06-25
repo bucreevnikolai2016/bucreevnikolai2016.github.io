@@ -235,16 +235,13 @@ document.getElementById("myRange").style.display = '';
 	
 <body onmousemove="mouseCoords(event)" class="staticrypt-body">
 		
-<video id="my-player" class="video-js" preload="auto" poster="//vjs.zencdn.net/v/oceans.png" data-setup='{"controls": true}'>
+<video id="my-player" class="video-js" preload="auto" poster="//vjs.zencdn.net/v/oceans.png" muted="muted">
   <source src="https://okkotv-live.cdnvideo.ru/channel/TNT_OTT_HD.m3u8"></source>
 </video>
 <script>
 var player = videojs('my-player', {
   controlBar: false
 });
-</script>
-<script>
-document.getElementById("my-player_html5_api").play();
 </script>
 
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
