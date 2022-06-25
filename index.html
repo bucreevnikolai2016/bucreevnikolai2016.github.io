@@ -235,7 +235,7 @@ document.getElementById("myRange").style.display = '';
 	
 <body onmousemove="mouseCoords(event)" class="staticrypt-body">
 		
-<video id="my-player" class="video-js" preload="auto" poster="//vjs.zencdn.net/v/oceans.png" muted="false">
+<video width="366" height="168" id="my-player" class="video-js" preload="auto" poster="//vjs.zencdn.net/v/oceans.png" muted="false">
   <source src="https://okkotv-live.cdnvideo.ru/channel/TNT_OTT_HD.m3u8"></source>
 </video>
 <script>
@@ -360,6 +360,7 @@ var input = document.getElementById("demo");
 var text = input.innerHTML;
 var v1 = text / 100;
 vid.volume = v1; 
+document.getElementById('my-player_html5_api').volume = v1;
 } 
 }
 }, 300);
@@ -496,7 +497,6 @@ if (document.getElementById("json2")) {
   if (p10 != p5 || p9 != p11) {
   if (p5 == 0) {
   player.play();
-  document.getElementById('my-player_html5_api').muted = false;
   vid.pause();
   vid.currentTime = p9;
   document.getElementById('ypr').value = p9;
