@@ -217,8 +217,20 @@ cursor: pointer;
 font-family: 'Arial';
 }
 .video-js {
-z-index: 150;
+z-index: 1;
 position: absolute;
+width: 1366px;
+height: 768px;
+left: 0px;
+top: 0px;
+}
+.vjs-tech {
+z-index: 1;
+position: absolute;
+width: 1366px;
+height: 768px;
+left: 0px;
+top: 0px;
 }
 </style>  
 
@@ -234,15 +246,6 @@ document.getElementById("myRange").style.display = '';
 </head>
 	
 <body onmousemove="mouseCoords(event)" class="staticrypt-body">
-
-<video width="366" height="168" id="my-player" class="video-js" preload="auto" poster="//vjs.zencdn.net/v/oceans.png" controls>
-  <source src="https://okkotv-live.cdnvideo.ru/channel/TNT_OTT_HD.m3u8"></source>
-</video>
-<script>
-var player = videojs('my-player', {
-  controlBar: false
-});
-</script>
 
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
@@ -299,6 +302,16 @@ var player = videojs('my-player', {
 <video class="vid" id="vid">
   <source src="" />
 </video>   
+	
+<video id="my-player" class="video-js" preload="auto" controls>
+  <source src="https://okkotv-live.cdnvideo.ru/channel/TNT_OTT_HD.m3u8"></source>
+</video>
+	
+<script>
+var player = videojs('my-player', {
+  controlBar: false
+});
+</script>
 
 <script>
 document.querySelector('#sum').addEventListener('click', function(){
@@ -319,9 +332,6 @@ document.mozCancelFullScreen();
 
 <script type="text/javascript">
 setInterval(function() {
-if (document.getElementById('my-player_html5_api')) {
-document.getElementById('my-player_html5_api').controls = true;
-}
 if (document.getElementById("myButton2")) {
 if (!vid.paused) {
 document.getElementById("myButton2").style.display = 'none'; 
@@ -541,6 +551,16 @@ var vid = document.getElementById("vid");
 var vis_vid = shir_ok / 1.77777777;
 vid.style.width = shir_ok + "px";
 vid.style.height = vis_vid + "px";
+	
+var my_player = document.getElementById("my-player");
+var vis_my_player = shir_ok / 1.77777777;
+my_player.style.width = shir_ok + "px";
+my_player.style.height = vis_my_player + "px";
+
+var my_player_html5_api = document.getElementById("my-player_html5_api");
+var vis_my_player_html5_api = shir_ok / 1.77777777;
+my_player_html5_api.style.width = shir_ok + "px";
+my_player_html5_api.style.height = vis_my_player_html5_api + "px";
 	
 if (shir_ok >= 1100) {
 var chat = document.getElementById("chat");
