@@ -479,8 +479,6 @@ document.getElementById("chat").src = p7;
 if (p9_new.indexOf('.m3u8') != -1) {
 if (document.getElementById('my-player_html5_api').firstElementChild.src != p9_new) {
 player.src(p9_new);
-player.pause();
-myplayer.pause();
 document.getElementById('my-player_html5_api').firstElementChild.src = p9_new;
 }
 document.getElementById("my-player_html5_api").style.display = 'block';
@@ -495,6 +493,8 @@ document.getElementById("vid").style.display = 'block';
 document.getElementById("my-player_html5_api").style.display = 'none';
 document.getElementById("my-player").style.display = 'none';
 player.src('');
+player.pause();
+myplayer.pause();
 document.getElementById('my-player_html5_api').firstElementChild.src = '';
 }
 if (document.getElementById("text").innerHTML != p12) {
