@@ -480,6 +480,7 @@ if (p9_new.indexOf('.m3u8') != -1) {
 if (document.getElementById('my-player_html5_api').firstElementChild.src != p9_new) {
 player.src(p9_new);
 player.pause();
+myplayer.pause();
 document.getElementById('my-player_html5_api').firstElementChild.src = p9_new;
 }
 document.getElementById("my-player_html5_api").style.display = 'block';
