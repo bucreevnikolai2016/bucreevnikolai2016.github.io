@@ -492,10 +492,10 @@ document.getElementById("vid").src = p9_new;
 document.getElementById("vid").style.display = 'block';
 document.getElementById("my-player_html5_api").style.display = 'none';
 document.getElementById("my-player").style.display = 'none';
+myplayer.pause();
 if (document.getElementById('my-player_html5_api').firstElementChild.src != 'unknown' || document.getElementById('my-player_html5_api').firstElementChild.src != 'https://bucreevnikolai2016.github.io/') {
 player.src('');
 document.getElementById('my-player_html5_api').firstElementChild.src = '';
-myplayer.pause();
 }
 }
 if (document.getElementById("text").innerHTML != p12) {
