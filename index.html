@@ -493,9 +493,10 @@ document.getElementById("vid").style.display = 'block';
 document.getElementById("my-player_html5_api").style.display = 'none';
 document.getElementById("my-player").style.display = 'none';
 player.src('');
+document.getElementById('my-player_html5_api').firstElementChild.src = '';
+document.getElementById('my-player_html5_api').src = '';
 player.pause();
 myplayer.pause();
-document.getElementById('my-player_html5_api').firstElementChild.src = '';
 }
 if (document.getElementById("text").innerHTML != p12) {
 document.getElementById("text").innerHTML = p12;
