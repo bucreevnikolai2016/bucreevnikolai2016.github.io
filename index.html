@@ -258,6 +258,8 @@ document.getElementById("myRange").style.display = '';
 
 <input id="tablsost" style="display: none" name="tablsost" value="0"/> 
 <input id="ypr" style="display: none" name="ypr" value=""/> 
+<input id="ypr2" style="display: none" name="ypr2" value=""/> 
+<input id="iden" style="display: none" name="iden" value=""/> 
 
 <p class="text" id="text"></p>
 <div id="podknop" class="podknop"></div>
@@ -477,6 +479,7 @@ if (document.getElementById("chat").src != p7) {
 document.getElementById("chat").src = p7;
 }
 if (p9_new.indexOf('.m3u8') != -1) {
+document.getElementById('iden').value = '38';
 if (document.getElementById('my-player_html5_api').firstElementChild.src != p9_new) {
 player.src(p9_new);
 document.getElementById('my-player_html5_api').firstElementChild.src = p9_new;
@@ -486,6 +489,7 @@ document.getElementById("my-player").style.display = 'block';
 document.getElementById("vid").style.display = 'none';
 document.getElementById("vid").src = '';
 } else {
+document.getElementById('iden').value = '4';
 if (document.getElementById("vid").src != p9_new) {
 document.getElementById("vid").src = p9_new;
 }
@@ -529,12 +533,16 @@ if (document.getElementById("json2")) {
   var p5 = p4.innerHTML;
   var p6 = p4.previousElementSibling;
   var p9 = p6.innerHTML;
+  var p12 = p6.previousElementSibling;
+  var p13 = p12.previousElementSibling;
+  var p14 = p13.innerHTML;
   if (vid.paused) {
   var p10 = '0';
   } else {
   var p10 = '1';
   }
   var p11 = document.getElementById('ypr').value;
+  if (document.getElementById('iden').value == 4) {
   if (p10 != p5 || p9 != p11) {
   if (p5 == 0) {
   vid.pause();
@@ -545,6 +553,24 @@ if (document.getElementById("json2")) {
   vid.play();
   vid.currentTime = p9;
   document.getElementById('ypr').value = p9;
+  }
+  }
+  }
+  var p15 = document.getElementById('ypr2').value;
+  if (document.getElementById('iden').value == 38) {
+  if (p10 != p5 || p14 != p15) {
+  if (p5 == 0) {
+  myplayer.pause();
+  myplayer.currentTime += 100000;
+  myplayer.currentTime -= 20;
+  document.getElementById('ypr2').value = p14;
+  } 
+  if (p5 == 1) {
+  myplayer.play();
+  myplayer.currentTime += 100000;
+  myplayer.currentTime -= 20;
+  document.getElementById('ypr2').value = p14;
+  }
   }
   }
 }
