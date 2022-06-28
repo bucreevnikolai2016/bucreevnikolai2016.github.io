@@ -476,8 +476,19 @@ document.getElementById("youtube").src = p10;
 if (document.getElementById("chat").src != p7) {
 document.getElementById("chat").src = p7;
 }
+if (p9_new.indexOf('.m3u8') != -1) {
+if (document.getElementById('my-player_html5_api').firstElementChild.src != p9_new) {
+player.src(p9_new);
+}
+document.getElementById("vid").style.display = 'none';
+document.getElementById("vid").src = '';
+} else {
 if (document.getElementById("vid").src != p9_new) {
 document.getElementById("vid").src = p9_new;
+}
+document.getElementById("my-player_html5_api").style.display = 'none';
+document.getElementById("my-player").style.display = 'none';
+player.src('');
 }
 if (document.getElementById("text").innerHTML != p12) {
 document.getElementById("text").innerHTML = p12;
