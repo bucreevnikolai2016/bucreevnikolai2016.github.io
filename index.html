@@ -232,6 +232,11 @@ height: 768px;
 left: 0px;
 top: 0px;
 }
+.vjs-big-play-button {
+position: absolute;
+left: 638px;
+top: 359px;
+}
 </style>  
 
 <script>
@@ -606,7 +611,7 @@ myButton2.style.top = top_myButton2 + "px";
 myButton2.style.fontSize = shrift_myButton2 + "px";
 	
 var vjs_big_play_button = document.getElementsByClassName('vjs-big-play-button')[0];
-var left_vjs_big_play_button = shir_ok * (455 / 1366);
+var left_vjs_big_play_button = shir_ok * (638 / 1366);
 var top_vjs_big_play_button = vis_vid * (359 / 768);
 vjs_big_play_button.style.left = left_vjs_big_play_button + "px";
 vjs_big_play_button.style.top = top_vjs_big_play_button + "px";
