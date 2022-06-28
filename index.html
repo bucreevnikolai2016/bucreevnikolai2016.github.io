@@ -319,6 +319,10 @@ var player = videojs('my-player', {
 </script>
 
 <script>
+myplayer = document.getElementById('my-player_html5_api');
+</script>
+
+<script>
 document.querySelector('#sum').addEventListener('click', function(){
 if(document.documentElement.webkitRequestFullscreen) {
 document.documentElement.webkitRequestFullscreen();
@@ -338,12 +342,13 @@ document.mozCancelFullScreen();
 <script type="text/javascript">
 setInterval(function() {
 if (document.getElementById("myButton2")) {
-if (!vid.paused) {
+if (!vid.paused || !myplayer.paused) {
 document.getElementById("myButton2").style.display = 'none'; 
 document.getElementById("sum").style.display = 'none'; 
 document.getElementById("sub").style.display = 'none';
 document.getElementById("myRange").style.display = 'none';
-} else {
+} 
+if (vid.paused & myplayer.paused) {
 document.getElementById("myButton2").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
