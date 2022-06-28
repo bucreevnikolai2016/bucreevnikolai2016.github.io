@@ -313,7 +313,7 @@ document.getElementById("myRange").style.display = '';
 <div style="display: none" class="json" id="json">json here</div>
 <div style="display: none" class="json2" id="json2">json here</div>
 
-<iframe class="youtube" id="youtube" src="" title="YouTube video player" frameborder="0" controls="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" id="youtube" src="" title="YouTube video player" frameborder="0" allowfullscreen="true" srolling="no" controls="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe class="chat" id="chat" style="border:0" src=""></iframe> 
 
@@ -472,12 +472,21 @@ var p2 = p1.firstElementChild;
 var p3 = p2.lastElementChild;
 var p4 = p3.lastElementChild;
 var p5 = p4.innerHTML;
+if (p5.indexOf('youtube') != -1) {
 var p6 = p5.slice(-11);
 var p7 = "https://www.youtube.com/live_chat?v=" + p6 + "&embed_domain=bucreevnikolai2016.github.io&dark_theme=1";
+var p10 = "https://www.youtube.com/embed/" + p6;
+}
+if (p5.indexOf('twitch') != -1) {
+var t1 = p5.length;
+var t2 = t1 - 23;
+var p6 = p5.slice(-t2);
+var p7 = "https://www.twitch.tv/embed/" + p6 + "/chat?parent=bucreevnikolai2016.github.io";
+var p10 = "https://player.twitch.tv/?channel=" + p6 + "&parent=bucreevnikolai2016.github.io";
+}
 var p8 = p4.previousElementSibling;
 var p9 = p8.innerHTML;
 var p9_new = p9.replace(/amp;/g,'');
-var p10 = "https://www.youtube.com/embed/" + p6;
 var p11 = p8.previousElementSibling;
 var p13 = p11.innerHTML;
 var p14 = p13.replace(/ /g, "+");
