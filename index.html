@@ -495,7 +495,7 @@ document.getElementById("my-player").style.display = 'none';
 if (document.getElementById('my-player_html5_api').firstElementChild.src != 'unknown' || document.getElementById('my-player_html5_api').firstElementChild.src != 'https://bucreevnikolai2016.github.io/') {
 player.src('');
 document.getElementById('my-player_html5_api').firstElementChild.src = '';
-document.getElementById('my-player_html5_api').src = '';
+myplayer.pause();
 }
 }
 if (document.getElementById("text").innerHTML != p12) {
