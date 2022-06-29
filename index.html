@@ -324,10 +324,6 @@ document.getElementById("myRange").style.display = '';
 <video id="my-player" class="video-js" preload="auto" controls>
   <source src=""></source>
 </video>
-
-<script>
-var massiv = ["1", "2", "3"];
-</script>
 	
 <script>
 var player = videojs('my-player', {
@@ -358,7 +354,6 @@ document.mozCancelFullScreen();
 
 <script type="text/javascript">
 setInterval(function() {
-massiv.push("22");
 if (document.getElementById("myButton2")) {
 if (!vid.paused || !myplayer.paused) {
 document.getElementById("myButton2").style.display = 'none'; 
