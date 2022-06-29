@@ -561,6 +561,11 @@ if (document.getElementById("json2")) {
   } else {
   var p10 = '1';
   }
+  if (myplayer.paused) {
+  var p16 = '0';
+  } else {
+  var p16 = '1';
+  }
   var p11 = document.getElementById('ypr').value;
   if (document.getElementById('iden').value == 4) {
   if (p10 != p5 || p9 != p11) {
@@ -578,7 +583,7 @@ if (document.getElementById("json2")) {
   }
   var p15 = document.getElementById('ypr2').value;
   if (document.getElementById('iden').value == 38) {
-  if (p10 != p5 || p14 != p15) {
+  if (p16 != p5 || p14 != p15) {
   if (p5 == 0) {
   myplayer.pause();
   myplayer.currentTime += 100000;
