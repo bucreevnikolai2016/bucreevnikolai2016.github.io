@@ -355,7 +355,7 @@ document.mozCancelFullScreen();
 <script type="text/javascript">
 setInterval(function() {
 if (document.getElementById("myButton2")) {
-if (!vid.paused || !myplayer.paused) {
+if (!vid.paused && document.getElementById('tablsost').value != 1 || !myplayer.paused && document.getElementById('tablsost').value != 1) {
 document.getElementById("myButton2").style.display = 'none'; 
 document.getElementById("sum").style.display = 'none'; 
 document.getElementById("sub").style.display = 'none';
