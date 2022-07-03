@@ -96,6 +96,19 @@ color: white;
 font-size: 19px;
 cursor: pointer;
 }
+.sinhron {
+z-index: 90;
+position: absolute;
+left: 130px;
+top: 10px;
+width: 30px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 19px;
+cursor: pointer;
+}
 .slider {
 z-index: 90;
 width: 70px;
@@ -265,6 +278,7 @@ document.getElementById("myRange").style.display = '';
 <button class="sum" id="sum" ><i class="fa fa-expand" aria-hidden="true"></i></button>
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
 <button class="myButton2" id="myButton2" type="button"><i class="fa fa-lock" aria-hidden="true"></i></button>  
+<button class="sinhron" id="sinhron" type="button"><i class="fa fa-retweet" aria-hidden="true"></i></button>  
 
 <input id="tablsost" style="display: none" name="tablsost" value="0"/> 
 <input id="ypr" style="display: none" name="ypr" value=""/> 
@@ -757,6 +771,18 @@ sub.style.height = vis_sub + "px";
 sub.style.left = left_sub + "px";
 sub.style.top = top_sub + "px";
 sub.style.fontSize = shrift_sub + "px";
+	
+var sinhron = document.getElementById("sinhron");
+var shir_sinhron = shir_ok * (30 / 1366);
+var vis_sinhron = shir_sinhron;
+var shrift_sinhron = 19 * (shir_ok / 1366);
+var left_sinhron = shir_ok * (130 / 1366);
+var top_sinhron = vis_vid * (10 / 768);
+sinhron.style.width = shir_sinhron + "px";
+sinhron.style.height = vis_sinhron + "px";
+sinhron.style.left = left_sinhron + "px";
+sinhron.style.top = top_sinhron + "px";
+sinhron.style.fontSize = shrift_sinhron + "px";
 	
 var slidecontainer = document.getElementById("slidecontainer");
 var slider = document.getElementById("myRange");
