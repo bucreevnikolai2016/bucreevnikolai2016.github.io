@@ -600,7 +600,6 @@ if (document.getElementById("json2")) {
   }
   var razn = myplayer.duration - n1;
   var otmot = razn + p9;
-  var vrvos = myplayer.duration - otmot;
   var p11 = document.getElementById('ypr').value;
   if (document.getElementById('iden').value == 4) {
   if (p10 != p5 || p9 != p11) {
@@ -625,7 +624,7 @@ if (document.getElementById("json2")) {
   myplayer.pause();
   if (p9 < 50 || p9 > 5) {
   myplayer.currentTime += 100000;
-  myplayer.currentTime = vrvos;
+  myplayer.currentTime -= otmot;
   }
   document.getElementById('ypr2').value = p14;
   } 
@@ -633,7 +632,7 @@ if (document.getElementById("json2")) {
   myplayer.play();
   if (p9 < 50 || p9 > 5) {
   myplayer.currentTime += 100000;
-  myplayer.currentTime = vrvos;
+  myplayer.currentTime -= otmot;
   }
   document.getElementById('ypr2').value = p14;
   }
