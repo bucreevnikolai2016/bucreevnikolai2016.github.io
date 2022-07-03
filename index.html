@@ -597,8 +597,6 @@ if (document.getElementById("json2")) {
   } else {
   var n1 = '0';
   }
-  console.log(n1);
-  console.log(myplayer.duration);
   var razn = myplayer.duration - n1;
   var otmot = razn + p9;
   var vrvos = myplayer.duration - otmot;
@@ -620,6 +618,8 @@ if (document.getElementById("json2")) {
   var p15 = document.getElementById('ypr2').value;
   if (document.getElementById('iden').value == 38) {
   if (p16 != p5 || p14 != p15) {
+  console.log(n1);
+  console.log(myplayer.duration);
   if (p5 == 0) {
   myplayer.pause();
   myplayer.currentTime = vrvos;
