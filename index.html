@@ -176,6 +176,16 @@ left: 583px;
 top: 309px;
 display: none;
 }
+.sinx {
+z-index: 102;
+position: absolute;
+background-color: #696969;
+width: 200px;
+height: 150px;
+left: 583px;
+top: 309px;
+display: none;
+}
 .staticrypt-title {
 display: none;
 }
@@ -198,6 +208,19 @@ font-size: 14px;
 border: none;
 font-family: 'Arial';
 }
+.sinxinp {
+z-index: 103;
+position: absolute;
+background-color: #000000;
+width: 150px;
+height: 30px;
+left: 25px;
+top: 23px;
+color: white; 
+font-size: 14px; 
+border: none;
+font-family: 'Arial';
+}
 .zap {
 z-index: 103;
 position: absolute;
@@ -206,6 +229,16 @@ left: 43px;
 top: 48px; 
 font-size: 12px; 
 font-family: 'Arial';
+}
+.sinxtext {
+z-index: 103;
+position: absolute;
+width: 150px;
+left: 25px;
+top: 48px; 
+font-size: 10px; 
+font-family: 'Arial';
+word-wrap: break-word;
 }
 .staticrypt-remember {
 z-index: 103;
@@ -216,6 +249,20 @@ left: 23px;
 top: 57px;
 }
 .staticrypt-decrypt-button {
+z-index: 103;
+position: absolute;
+background-color: #0B0E0E;
+width: 120px;
+height: 30px;
+left: 40px;
+top: 93px;
+color: white; 
+font-size: 14px; 
+border: none;
+cursor: pointer;
+font-family: 'Arial';
+}
+.sinxbut {
 z-index: 103;
 position: absolute;
 background-color: #0B0E0E;
@@ -265,6 +312,7 @@ top: 0px;
 <script>
 function mouseCoords(e) {
 document.getElementById("myButton2").style.display = '';
+document.getElementById("sinhron").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 document.getElementById("myRange").style.display = '';
@@ -285,6 +333,11 @@ document.getElementById("myRange").style.display = '';
 <input id="ypr2" style="display: none" name="ypr2" value=""/> 
 <input id="iden" style="display: none" name="iden" value=""/> 
 
+<div class="sinx" id="sinx">
+<input class="sinxinp" id="sinxinp" name="sinxinp" placeholder="Число от 0 до 60"/>
+<button class="sinxbut" id="sinxbut" type="button">Синхронизировать</button>  
+<p id="sinxtext" class="sinxtext">Данное число выводится на стрим, не нужно вводить рандомные числа</p>
+</div>	
 <p class="text" id="text"></p>
 <div id="stop" class="stop"></div>
 <div id="podknop" class="podknop"></div>
@@ -372,6 +425,7 @@ if (document.getElementById("myButton2")) {
 if (!vid.paused || !myplayer.paused) {
 if (document.getElementById('tablsost').value != 1) {
 document.getElementById("myButton2").style.display = 'none'; 
+document.getElementById("sinhron").style.display = 'none'; 
 document.getElementById("sum").style.display = 'none'; 
 document.getElementById("sub").style.display = 'none';
 document.getElementById("myRange").style.display = 'none';
@@ -379,6 +433,7 @@ document.getElementById("myRange").style.display = 'none';
 } 
 if (vid.paused & myplayer.paused) {
 document.getElementById("myButton2").style.display = '';
+document.getElementById("sinhron").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 document.getElementById("myRange").style.display = '';
@@ -842,6 +897,16 @@ par.style.width = shir_par + "px";
 par.style.height = vis_par + "px";
 par.style.left = left_par + "px";
 par.style.top = top_par + "px";
+	
+var sinx = document.getElementById("sinx");
+var shir_sinx = shir_ok * (200 / 1366);
+var vis_sinx = shir_sinx * (150 / 200);
+var left_sinx = shir_ok * (583 / 1366);
+var top_sinx = vis_vid * (309 / 768);
+sinx.style.width = shir_sinx + "px";
+sinx.style.height = vis_sinx + "px";
+sinx.style.left = left_sinx + "px";
+sinx.style.top = top_sinx + "px";
 
 var staticrypt_password = document.getElementById("staticrypt-password");
 var shir_staticrypt_password = shir_ok * (150 / 1366);
@@ -854,6 +919,18 @@ staticrypt_password.style.height = vis_staticrypt_password + "px";
 staticrypt_password.style.left = left_staticrypt_password + "px";
 staticrypt_password.style.top = top_staticrypt_password + "px";
 staticrypt_password.style.fontSize = shrift_staticrypt_password + "px";
+	
+var sinxinp = document.getElementById("sinxinp");
+var shir_sinxinp = shir_ok * (150 / 1366);
+var vis_sinxinp = shir_sinxinp * (30 / 150);
+var left_sinxinp = shir_ok * (25 / 1366);
+var top_sinxinp = vis_vid * (23 / 768);
+var shrift_sinxinp = 14 * (shir_ok / 1366);
+sinxinp.style.width = shir_sinxinp + "px";
+sinxinp.style.height = vis_sinxinp + "px";
+sinxinp.style.left = left_sinxinp + "px";
+sinxinp.style.top = top_sinxinp + "px";
+sinxinp.style.fontSize = shrift_sinxinp + "px";
 
 var zap = document.getElementById("zap");
 var shir_zap = shir_ok * (150 / 1366);
@@ -864,6 +941,16 @@ zap.style.width = shir_zap + "px";
 zap.style.left = left_zap + "px";
 zap.style.top = top_zap + "px";
 zap.style.fontSize = shrift_zap + "px";
+	
+var sinxtext = document.getElementById("sinxtext");
+var shir_sinxtext = shir_ok * (150 / 1366);
+var left_sinxtext = shir_ok * (25 / 1366);
+var top_sinxtext = vis_vid * (48 / 768);
+var shrift_sinxtext = 10 * (shir_ok / 1366);
+sinxtext.style.width = shir_sinxtext + "px";
+sinxtext.style.left = left_sinxtext + "px";
+sinxtext.style.top = top_sinxtext + "px";
+sinxtext.style.fontSize = shrift_sinxtext + "px";
 
 var staticrypt_remember = document.getElementById("staticrypt-remember");
 var shir_staticrypt_remember = shir_ok * (13 / 1366);
@@ -886,6 +973,18 @@ staticrypt_decrypt_button.style.height = vis_staticrypt_decrypt_button + "px";
 staticrypt_decrypt_button.style.left = left_staticrypt_decrypt_button + "px";
 staticrypt_decrypt_button.style.top = top_staticrypt_decrypt_button + "px";
 staticrypt_decrypt_button.style.fontSize = shrift_staticrypt_decrypt_button + "px";
+	
+var sinxbut = document.getElementById("sinxbut");
+var shir_sinxbut = shir_ok * (120 / 1366);
+var vis_sinxbut = shir_sinxbut * (30 / 120);
+var left_sinxbut = shir_ok * (40 / 1366);
+var top_sinxbut = vis_vid * (93 / 768);
+var shrift_sinxbut = 14 * (shir_ok / 1366);
+sinxbut.style.width = shir_sinxbut + "px";
+sinxbut.style.height = vis_sinxbut + "px";
+sinxbut.style.left = left_sinxbut + "px";
+sinxbut.style.top = top_sinxbut + "px";
+sinxbut.style.fontSize = shrift_sinxbut + "px";
 }
 }, 2000);
 </script>
