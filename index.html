@@ -591,6 +591,14 @@ if (document.getElementById("json2")) {
   } else {
   var p16 = '1';
   }
+  var nom = masstime.indexOf(p14);
+  if (nom != -1) {
+  var n1 = masspl[nom]);
+  } else {
+  var n1 = '0';
+  }
+  var razn = myplayer.duration - n1;
+  var otmot = razn + p9;
   var p11 = document.getElementById('ypr').value;
   if (document.getElementById('iden').value == 4) {
   if (p10 != p5 || p9 != p11) {
@@ -612,13 +620,13 @@ if (document.getElementById("json2")) {
   if (p5 == 0) {
   myplayer.pause();
   myplayer.currentTime += 100000;
-  myplayer.currentTime -= 20;
+  myplayer.currentTime -= otmot;
   document.getElementById('ypr2').value = p14;
   } 
   if (p5 == 1) {
   myplayer.play();
   myplayer.currentTime += 100000;
-  myplayer.currentTime -= 20;
+  myplayer.currentTime -= otmot;
   document.getElementById('ypr2').value = p14;
   }
   }
