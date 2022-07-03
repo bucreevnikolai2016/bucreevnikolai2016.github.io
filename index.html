@@ -623,12 +623,12 @@ if (document.getElementById("json2")) {
   console.log(myplayer.duration);
   if (p5 == 0) {
   myplayer.pause();
-  myplayer.currentTime = vrvos;
+  if (p9 < 50 || p9 > 5) {myplayer.currentTime = vrvos;}
   document.getElementById('ypr2').value = p14;
   } 
   if (p5 == 1) {
   myplayer.play();
-  myplayer.currentTime = vrvos;
+  if (p9 < 50 || p9 > 5) {myplayer.currentTime = vrvos;}
   document.getElementById('ypr2').value = p14;
   }
   }
