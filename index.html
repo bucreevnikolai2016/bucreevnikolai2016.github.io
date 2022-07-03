@@ -542,6 +542,31 @@ if (document.getElementById("json2")) {
 }
 }, 300);
 </script> 
+	
+<script>
+var date = new Date();
+var ch = date.getHours() * 60 * 60;
+var min = date.getMinutes() * 60;
+var sec = date.getSeconds();
+var vrem = ch + min + sec;
+var v1 = myplayer.duration;
+var masspl = [v1];
+var masstime = [vrem];
+setInterval(function() { 
+var date = new Date();
+var ch = date.getHours() * 60 * 60;
+var min = date.getMinutes() * 60;
+var sec = date.getSeconds();
+var vrem = ch + min + sec;
+var v1 = myplayer.duration;
+if (masspl.length > 50) {
+masspl.splice(0, 1);
+masstime.splice(0, 1);
+}
+masspl.push(v1);
+masstime.push(vrem);
+}, 500);
+</script>
 
 <script type="text/javascript">
   setInterval(function() {
@@ -555,8 +580,7 @@ if (document.getElementById("json2")) {
   var p9 = p6.innerHTML;
   var p12 = p6.previousElementSibling;
   var p13 = p12.previousElementSibling;
-  var t13 = p13.previousElementSibling;
-  var p14 = t13.innerHTML;
+  var p14 = p13.innerHTML;
   if (vid.paused) {
   var p10 = '0';
   } else {
