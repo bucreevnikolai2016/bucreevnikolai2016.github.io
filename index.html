@@ -332,6 +332,7 @@ document.getElementById("myRange").style.display = '';
 <input id="ypr" style="display: none" name="ypr" value=""/> 
 <input id="ypr2" style="display: none" name="ypr2" value=""/> 
 <input id="iden" style="display: none" name="iden" value=""/> 
+<input id="zaderg" style="display: none" name="zaderg" value=""/> 
 
 <div class="sinx" id="sinx">
 <input class="sinxinp" id="sinxinp" name="sinxinp" placeholder="Число от 0 до 60"/>
@@ -460,6 +461,14 @@ document.getElementById("zatem").style.display = 'block';
 document.querySelector('#sinxbut').addEventListener('click', function(){
 document.getElementById("sinx").style.display = 'none';
 document.getElementById("zatem").style.display = 'none';
+var dataa = new Date();
+var secundii = dataa.getSeconds();
+if (document.getElementById('sinxinp').value > 0) {
+var sinxinpp = document.getElementById('sinxinp').value;
+} else {
+var sinxinpp = '0';
+}
+document.getElementById('zaderg').value = secundii - sinxinpp;
 });
 </script>
 
@@ -614,19 +623,38 @@ document.getElementById("text").innerHTML = p12;
 </script>  
 
 <script type="text/javascript">
+var massp8 = [];
+var m1 = [];
 setInterval(function() { 
 if (document.getElementById("json2")) {
-  var p1 = json2.firstElementChild;
-  var p2 = p1.firstElementChild;
-  var p3 = p2.lastElementChild;
-  var p4 = p3.lastElementChild;
-  var p6 = p4.previousElementSibling;
-  var p7 = p6.previousElementSibling;
-  var p8 = p7.innerHTML;
-  document.getElementById('tablsost').value = p8;
+var p1 = json2.firstElementChild;
+var p2 = p1.firstElementChild;
+var p3 = p2.lastElementChild;
+var p4 = p3.lastElementChild;
+var p6 = p4.previousElementSibling;
+var p7 = p6.previousElementSibling;
+var p8 = p7.innerHTML;
+if (document.getElementById('zaderg').value > 0) {
+var zader = document.getElementById('zaderg').value;
+} else {
+var zader = '0';
+}
+var zader2 = zader * 1000;
+var data = new Date();
+var chasi = data.getHours() * 60 * 60;
+var minyti = data.getMinutes() * 60;
+var secundi = data.getSeconds();
+var vremya = chasi + minyti + secundi;
+if (massp8.length > 50) {
+massp8.splice(0, 1);
+m1.splice(0, 1);
+}
+massp8.push(p8);
+m1.push(vremya);
+setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nom = m1.indexOf(vvv); if (nom != -1) {document.getElementById('tablsost').value = massp8[nom];}}, zader2);
 }
 }, 300);
-</script> 
+</script>  
 	
 <script>
 var date = new Date();
