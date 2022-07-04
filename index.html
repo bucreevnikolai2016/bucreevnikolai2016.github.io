@@ -333,6 +333,8 @@ document.getElementById("myRange").style.display = '';
 <input id="ypr2" style="display: none" name="ypr2" value=""/> 
 <input id="iden" style="display: none" name="iden" value=""/> 
 <input id="zaderg" style="display: none" name="zaderg" value=""/> 
+<input id="vide1" style="display: none" name="vide1" value="0"/> 
+<input id="vide2" style="display: none" name="vide2" value="0"/> 
 
 <div class="sinx" id="sinx">
 <input class="sinxinp" id="sinxinp" name="sinxinp" placeholder="Число от 0 до 60"/>
@@ -712,12 +714,12 @@ var vremya = chasi + minyti + secundi;
   var p12 = p6.previousElementSibling;
   var p13 = p12.previousElementSibling;
   var p14 = p13.innerHTML;
-  if (vid.paused) {
+  if (document.getElementById('vide1').value == 0) {
   var p10 = '0';
   } else {
   var p10 = '1';
   }
-  if (myplayer.paused) {
+  if (document.getElementById('vide2').value == 0) {
   var p16 = '0';
   } else {
   var p16 = '1';
@@ -743,6 +745,7 @@ m2.splice(0, 1);
 massp9.push(p9);
 massotmot.push(otmot);
 m2.push(vremya);
+document.getElementById('vide1').value = '0';
 setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {vid.pause(); vid.currentTime = massp9[nomm];}}, zader2);
   document.getElementById('ypr').value = p9;
   } 
@@ -755,6 +758,7 @@ m2.splice(0, 1);
 massp9.push(p9);
 massotmot.push(otmot);
 m2.push(vremya);
+document.getElementById('vide1').value = '1';
 setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {vid.play(); vid.currentTime = massp9[nomm];}}, zader2);
   document.getElementById('ypr').value = p9;
   }
@@ -772,6 +776,7 @@ m2.splice(0, 1);
 massp9.push(p9);
 massotmot.push(otmot);
 m2.push(vremya);
+document.getElementById('vide2').value = '0';
 setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {myplayer.pause(); myplayer.currentTime += 100000; myplayer.currentTime -= massotmot[nomm] + zader;}}, zader2);
   document.getElementById('ypr2').value = p14;
   } 
@@ -784,6 +789,7 @@ m2.splice(0, 1);
 massp9.push(p9);
 massotmot.push(otmot);
 m2.push(vremya);
+document.getElementById('vide2').value = '1';
 setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {myplayer.play(); myplayer.currentTime += 100000; myplayer.currentTime -= massotmot[nomm] + zader;}}, zader2);
   document.getElementById('ypr2').value = p14;
   }
