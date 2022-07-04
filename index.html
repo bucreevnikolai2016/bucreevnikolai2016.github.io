@@ -686,8 +686,22 @@ masstime.push(vrem);
 </script>
 
 <script type="text/javascript">
+var massp9 = [];
+var massotmot = [];
+var m2 = [];
   setInterval(function() {
 if (document.getElementById("json2")) {
+if (document.getElementById('zaderg').value > 0) {
+var zader = document.getElementById('zaderg').value;
+} else {
+var zader = '0';
+}
+var zader2 = zader * 1000;
+var data = new Date();
+var chasi = data.getHours() * 60 * 60;
+var minyti = data.getMinutes() * 60;
+var secundi = data.getSeconds();
+var vremya = chasi + minyti + secundi;
   var p1 = json2.firstElementChild;
   var p2 = p1.firstElementChild;
   var p3 = p2.lastElementChild;
@@ -721,13 +735,27 @@ if (document.getElementById("json2")) {
   if (document.getElementById('iden').value == 4) {
   if (p10 != p5 || p9 != p11) {
   if (p5 == 0) {
-  vid.pause();
-  vid.currentTime = p9;
+if (massp9.length > 150) {
+massp9.splice(0, 1);
+massotmot.splice(0, 1);
+m2.splice(0, 1);
+}
+massp9.push(p9);
+massotmot.push(otmot);
+m2.push(vremya);
+setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {vid.pause(); vid.currentTime = massp9[nomm];}}, zader2);
   document.getElementById('ypr').value = p9;
   } 
   if (p5 == 1) {
-  vid.play();
-  vid.currentTime = p9;
+if (massp9.length > 150) {
+massp9.splice(0, 1);
+massotmot.splice(0, 1);
+m2.splice(0, 1);
+}
+massp9.push(p9);
+massotmot.push(otmot);
+m2.push(vremya);
+setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {vid.play(); vid.currentTime = massp9[nomm];}}, zader2);
   document.getElementById('ypr').value = p9;
   }
   }
@@ -736,15 +764,27 @@ if (document.getElementById("json2")) {
   if (document.getElementById('iden').value == 38) {
   if (p16 != p5 || p14 != p15) {
   if (p5 == 0) {
-  myplayer.pause();
-  myplayer.currentTime += 100000;
-  myplayer.currentTime -= otmot;
+if (massp9.length > 150) {
+massp9.splice(0, 1);
+massotmot.splice(0, 1);
+m2.splice(0, 1);
+}
+massp9.push(p9);
+massotmot.push(otmot);
+m2.push(vremya);
+setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {myplayer.pause(); myplayer.currentTime += 100000; myplayer.currentTime -= massotmot[nomm] + zader;}}, zader2);
   document.getElementById('ypr2').value = p14;
   } 
   if (p5 == 1) {
-  myplayer.play();
-  myplayer.currentTime += 100000;
-  myplayer.currentTime -= otmot;
+if (massp9.length > 150) {
+massp9.splice(0, 1);
+massotmot.splice(0, 1);
+m2.splice(0, 1);
+}
+massp9.push(p9);
+massotmot.push(otmot);
+m2.push(vremya);
+setTimeout(() => {var data = new Date(); var chasi = data.getHours() * 60 * 60; var minyti = data.getMinutes() * 60; var secundi = data.getSeconds(); var vremya = chasi + minyti + secundi; var vvv = vremya - zader; var nomm = m2.indexOf(vvv); if (nomm != -1) {myplayer.play(); myplayer.currentTime += 100000; myplayer.currentTime -= massotmot[nomm] + zader;}}, zader2);
   document.getElementById('ypr2').value = p14;
   }
   }
