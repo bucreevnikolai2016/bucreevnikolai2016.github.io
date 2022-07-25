@@ -483,6 +483,17 @@ document.getElementById("notsinx").style.display = '';
 }, 3000);
 </script>
 
+<script>
+setInterval(function() {
+if (document.getElementById("myButton2")) {
+if (document.getElementById('sinxinp').value != '') {
+document.getElementById("notsinhron").style.display = 'none';
+document.getElementById("notsinx").style.display = 'none';
+}
+}
+}, 1000);
+</script>
+	
 <script type="text/javascript">
 document.querySelector('#myButton2').addEventListener('click', function(){
 document.getElementById("par").style.display = 'block';
