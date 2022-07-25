@@ -308,6 +308,31 @@ height: 768px;
 left: 0px;
 top: 0px;
 }
+.notsinhron {
+z-index: 90;
+position: absolute;
+left: 170px;
+top: 10px;
+width: 30px;
+height: 30px;
+background: transparent;
+border: none;
+color: white; 
+font-size: 19px;
+}
+.notsinx {
+z-index: 90;
+position: absolute;
+left: 210px;
+top: 10px;
+width: 150px;
+height: 30px;
+background-color: #2F4F4F;
+border: none;
+color: white; 
+font-size: 14px;
+font-family: Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+}
 </style>  
 
 <script>
@@ -328,6 +353,7 @@ document.getElementById("myRange").style.display = '';
 <button class="sub" id="sub" ><i class="fa fa-compress" aria-hidden="true"></i></button>
 <button class="myButton2" id="myButton2" type="button"><i class="fa fa-lock" aria-hidden="true"></i></button>  
 <button class="sinhron" id="sinhron" type="button"><i class="fa fa-retweet" aria-hidden="true"></i></button>  
+<button class="notsinhron" id="notsinhron" type="button"><i class="fa fa-hand-o-left" aria-hidden="true"></i></button> 
 
 <input id="tablsost" style="display: none" name="tablsost" value="0"/> 
 <input id="ypr" style="display: none" name="ypr" value=""/> 
@@ -337,6 +363,7 @@ document.getElementById("myRange").style.display = '';
 <input id="vide1" style="display: none" name="vide1" value="0"/> 
 <input id="vide2" style="display: none" name="vide2" value="0"/> 
 
+<button class="notsinx" id="notsinx" type="button">Вы не синхронизированы со стримером</button>  
 <div class="sinx" id="sinx">
 <input class="sinxinp" id="sinxinp" name="sinxinp" placeholder="Число от 0 до 60"/>
 <button class="sinxbut" id="sinxbut" type="button">Синхронизировать</button>  
