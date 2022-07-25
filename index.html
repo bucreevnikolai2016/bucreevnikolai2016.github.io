@@ -342,6 +342,10 @@ document.getElementById("sinhron").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 document.getElementById("myRange").style.display = '';
+if (document.getElementById('sinxinp').value == '') {
+document.getElementById("notsinhron").style.display = '';
+document.getElementById("notsinx").style.display = '';
+}
 }
 </script>	
 	
@@ -460,6 +464,8 @@ document.getElementById("sinhron").style.display = 'none';
 document.getElementById("sum").style.display = 'none'; 
 document.getElementById("sub").style.display = 'none';
 document.getElementById("myRange").style.display = 'none';
+document.getElementById("notsinhron").style.display = 'none';
+document.getElementById("notsinx").style.display = 'none';
 }
 } 
 if (vid.paused & myplayer.paused) {
@@ -468,6 +474,10 @@ document.getElementById("sinhron").style.display = '';
 document.getElementById("sum").style.display = '';
 document.getElementById("sub").style.display = '';
 document.getElementById("myRange").style.display = '';
+if (document.getElementById('sinxinp').value == '') {
+document.getElementById("notsinhron").style.display = '';
+document.getElementById("notsinx").style.display = '';
+}
 }
 }
 }, 3000);
