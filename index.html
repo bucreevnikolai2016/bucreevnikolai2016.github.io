@@ -523,6 +523,18 @@ document.getElementById("notsinx").style.display = 'none';
 </script>
 	
 <script type="text/javascript">
+setInterval(function() {
+if (document.getElementById("myButton2")) {
+if (document.getElementById('tablsost').value == 1) {
+document.getElementById('podyou').style.zIndex = '11';
+} else {
+document.getElementById('podyou').style.zIndex = '9';
+}
+}
+}, 300);
+</script>
+	
+<script type="text/javascript">
 document.querySelector('#myButton2').addEventListener('click', function(){
 document.getElementById("par").style.display = 'block';
 document.getElementById("zatem").style.display = 'block';
