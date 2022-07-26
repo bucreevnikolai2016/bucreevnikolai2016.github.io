@@ -550,7 +550,11 @@ var sinxinpp = '0';
 if (sinxinpp == 0) {
 document.getElementById('zaderg').value = '0';
 } else {
+if (secundii < sinxinpp) {
+document.getElementById('zaderg').value = 60 + secundii - sinxinpp;
+} else {
 document.getElementById('zaderg').value = secundii - sinxinpp;
+}
 }
 });
 </script>
