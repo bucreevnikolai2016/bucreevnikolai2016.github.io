@@ -571,13 +571,8 @@ var vremya = chasi + minyti + secundi;
 if (document.getElementById('vremdeistadmin').value == p14) {
 } else {
 var razni = vremya - p14;
-if (razni < 10) {
-if (document.getElementById('zadgoogle').value == 0) {
+if (razni < 5) {
 document.getElementById('zadgoogle').value = razni;
-} else {
-var sum = document.getElementById('zadgoogle').value + razni;
-document.getElementById('zadgoogle').value = sum / 2;
-}
 }
 document.getElementById('vremdeistadmin').value = p14;
 }
