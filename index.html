@@ -394,6 +394,8 @@ document.getElementById("notsinx").style.display = '';
 <input id="zaderg" style="display: none" name="zaderg" value=""/> 
 <input id="vide1" style="display: none" name="vide1" value="0"/> 
 <input id="vide2" style="display: none" name="vide2" value="0"/> 
+<input id="vremdeistadmin" style="display: none" name="vremdeistadmin" value=""/> 
+<input id="zadgoogle" style="display: none" name="zadgoogle" value="0"/> 
 
 <button class="notsinx" id="notsinx" type="button">Вы не синхронизированы со стримером!</button>  
 <div class="sinx" id="sinx">
@@ -547,6 +549,41 @@ document.getElementById("sinx").style.display = 'block';
 document.getElementById("zatem").style.display = 'block';
 });
 </script>
+
+<script>
+setInterval(function() { 
+if (document.getElementById("json2")) {
+var p1 = json2.firstElementChild;
+var p2 = p1.firstElementChild;
+var p3 = p2.lastElementChild;
+var p4 = p3.lastElementChild;
+var p5 = p4.innerHTML;
+var p6 = p4.previousElementSibling;
+var p9 = p6.innerHTML;
+var p12 = p6.previousElementSibling;
+var p13 = p12.previousElementSibling;
+var p14 = p13.innerHTML;
+var data = new Date();
+var chasi = data.getHours() * 60 * 60;
+var minyti = data.getMinutes() * 60;
+var secundi = data.getSeconds();
+var vremya = chasi + minyti + secundi;
+if (document.getElementById('vremdeistadmin').value == p14) {
+} else {
+var razni = vremya - p14;
+if (razni < 10) {
+if (document.getElementById('zadgoogle').value == 0) {
+document.getElementById('zadgoogle').value = razni;
+} else {
+var sum = document.getElementById('zadgoogle').value + razni;
+document.getElementById('zadgoogle').value = sum / 2;
+}
+}
+document.getElementById('vremdeistadmin').value = p14;
+}
+}
+}, 300);
+</script>
 	
 <script type="text/javascript">
 document.querySelector('#sinxbut').addEventListener('click', function(){
@@ -563,9 +600,9 @@ if (sinxinpp == 0) {
 document.getElementById('zaderg').value = '0';
 } else {
 if (secundii < sinxinpp) {
-document.getElementById('zaderg').value = 60 + secundii - sinxinpp - 1;
+document.getElementById('zaderg').value = 60 + secundii - sinxinpp - document.getElementById('zadgoogle').value;
 } else {
-document.getElementById('zaderg').value = secundii - sinxinpp - 1;
+document.getElementById('zaderg').value = secundii - sinxinpp - document.getElementById('zadgoogle').value;
 }
 }
 });
@@ -719,7 +756,7 @@ if (document.getElementById("text").innerHTML != p12) {
 document.getElementById("text").innerHTML = p12;
 }
 }, 1500);
-</script>  
+</script>  	
 
 <script type="text/javascript">
 var massp8 = [];
