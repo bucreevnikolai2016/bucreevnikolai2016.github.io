@@ -445,7 +445,7 @@ document.getElementById("notsinx").style.display = '';
 <div style="display: none" class="json" id="json">json here</div>
 <div style="display: none" class="json2" id="json2">json here</div>
 
-<iframe class="youtube" id="youtube" src="" modestbranding="1" title="YouTube video player" frameborder="0" allowfullscreen="true" srolling="no" controls="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" id="youtube" src="" title="YouTube video player" frameborder="0" allowfullscreen="true" srolling="no" controls="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <iframe class="chat" id="chat" style="border:0" src=""></iframe> 
 
@@ -700,7 +700,7 @@ var p5 = p4.innerHTML;
 if (p5.indexOf('youtu') != -1) {
 var p6 = p5.slice(-11);
 var p7 = "https://www.youtube.com/live_chat?v=" + p6 + "&embed_domain=bucreevnikolai2016.github.io&dark_theme=1";
-var p10 = "https://www.youtube.com/embed/" + p6;
+var p10 = "https://www.youtube.com/embed/" + p6 + "?modestbranding=1";
 }
 if (p5.indexOf('twitch') != -1) {
 var t1 = p5.length;
